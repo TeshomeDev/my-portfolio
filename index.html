@@ -9,8 +9,15 @@
   <body>
     <header>
       <h1 class="quintessential-regular logo"><span class="tb">TB</span> The Enthusiast Developer</h1>
-      <nav>
-        <ul class="navbar">
+        
+        <button id="btn" class="hamburger-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav id="navbar" class="navbar">
+        <ul>
           <li><a href="#home">Home</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#skill">Skills</a></li>
@@ -18,9 +25,13 @@
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
+
     </header>
     <main>
-      <div>
+      <div class="main-content">
+        <section class="welcome">
+          <h2>Welcome To My Portfolio</h2>
+        </section>
       <section id="home" class="intro">
         <div class="intro-image">
           <img
@@ -68,7 +79,8 @@
         </p>
       </section>
       </div>
-      <div class="aside">
+    </main>
+    <div class="sidebar-container">
       <aside id="resources" arial-label="Learning resources">
         <h2>Resources</h2>
         <ul class="resources-list">
@@ -80,9 +92,9 @@
         </ul>
       </aside>
       </div>
-    </main>
     <footer>
       <p>&copy; 2025 Teshome. All rights reserved.</p>
     </footer>
+    <script src="script.js"></script>
   </body>
 </html>
