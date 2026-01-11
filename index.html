@@ -5,16 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Portfolio</title>
     <link rel="stylesheet" href="css/styles.css" />
+
+    
+<link href="https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&family=Outfit:wght@100..900&family=Young+Serif&display=swap" rel="stylesheet">
+    
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   </head>
   <body>
-    <header class="hero">
-      <h1 class="logo"> <img
+    <header class="header">
+      <div class="logo"> <img
             src="./assets/images/mypictures/profile-picture.webp"
-            alt="Profile Picture of Teshome"
-            width="35"
-            height="35"
-          /><span>The Enthusiast Developer</span></h1>
+            alt="Profile Picture of Teshome"/>
+          <span>The Enthusiast Developer</span>
+      </div>
         
         <button id="btn" class="hamburger-menu">
           <div class="menu-text">Menu</div>
@@ -36,60 +40,140 @@
       </nav>
 
     </header>
-    <main>
-      <div class="main-content">
-        <section class="welcome">
-          <h2>Welcome To My Portfolio</h2>
+    
+    <div class="main-page-container">
+      <main>
+       <div class="hero-wrapper">
+        <section class="hero" id="home">
+
+          <div class="welcome">
+              <h1>Welcome To My Portfolio</h1>
+          </div>
+            
+          <div class="hero-section">
+            <div class="hero-image">
+                <img
+                src="./assets/images/mypictures/profile-picture.webp"
+                alt="Profile Picture of Teshome"
+                width="200"
+                height="200"
+              />
+            </div>
+            <div class="hero-text">
+              <h2>Hi, I am <span class="highlight">Teshome</span></h2>
+              <p>A passionate web developer in traing, building my skills in HTML, CSS, JavaScript, and modern frameworks. I'm on a journey to create beautiful, functional websites and applications.</p>
+            </div>
+          </div> 
         </section>
-      <section id="home" class="intro">
-        <div class="intro-image">
-          <img
-            src="./assets/images/mypictures/profile-picture.webp"
-            alt="Profile Picture of Teshome"
-            width="200"
-            height="200"
-          />
+       </div>
+        
+
+        <div class="content-wrapper">
+           <section id="about" class="about-description">
+          <h2>About me</h2>
+          <p>
+            I am a self-taught aspiring web developer from Ethiopia, currently learning the foundations of web development. My journey began with a curiosity about how websites work, and it has grown into a passion for creating digital experiences.
+          </p>
+          <p>
+            I'm focused on the core technologies of the web: HTML, CSS, and JavaScript, while also exploring frameworks like React and backend technologies.
+          </p>
+          <p>
+            When I'm not coding , I enjoy exploring tech blogs, practicing new coding challenges, and learning about the latest web development trends.
+          </p>
+        </section>
+        <section id="skill" class="skills">
+          <h2>My Skills</h2>
+          <div class="skills-container">
+            
+            <div class="skills-category">
+              <h3>Frontend <span>(</span> <span class="inline frontend">Learning</span> <span>)</span></h3>
+              <div class="skill-items">
+                <div class="skill-item">HTML5</div>
+                <div class="skill-item">CSS3</div>
+                <div class="skill-item">JavaScript</div>
+                <div class="skill-item">Responsive Web Design</div>
+                <div class="skill-item">Frontend Web Develoment Frameworks</div>
+              </div>
+            </div>
+            <div class="skills-category">
+              <h3>Backend <span>(</span> <span class="inline backend">Not yet</span> <span>)</span></h3>
+              <div class="skill-items">
+                <div class="skill-item">Node.js</div>
+                <div class="skill-item">Express</div>
+                <div class="skill-item">MongoDB</div>
+                <div class="skill-item">Rest APIs</div>
+                <div class="skill-item"></div>
+              </div>
+            </div>
+            <div class="skills-category">
+              <h3>Tools <span>(</span> <span class="inline tools">Learning</span> <span>)</span></h3>
+              <div class="skill-items">
+                <div class="skill-item">VS Code</div>
+                <div class="skill-item">Git and Github</div>
+                <div class="skill-item">Chrome DevTools</div>
+                <div class="skill-item">Command Line</div>
+                <div class="skill-item"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="projects">
+          <h2>Projects</h2>
+          <div class="projects-container">
+            <div class="project">
+              <div class="project-img">
+                <i class="fas fa-laptop"></i>
+              </div>
+              <div class="project-description">
+              <h3>My Portfolio</h3>
+              <p>A responsive personal portfolio built with semantic HTML, modern CSS, and JavaScript. Includes mobile navigation, layout restructuring for scalability, and smooth UI interactions.</p>
+              <button class="project-btn">In progress</button>
+              </div>
+              
+            </div>
+
+            <div class="project">
+              <div class="project-img"><i class="fas fa-envelope-open-text"></i></div>
+              <div class="project-description">
+                <h3>Voting System</h3>
+              <p>A voting system that models poll data using JavaScript <code>Map</code> and enforces single-vote rules with <code>Set</code>.</p>
+              <button class="project-btn">To be done</button>
+              </div>
+              </div>
+
+            <div class="project">
+              <div class="project-img"><i class="fas fa-university"></i></div>
+              <div class="project-description">
+                <h3>Bank Account Management</h3>
+                <p>A JavaScript application that simulates real banking operations including deposits, withdrawals, balance tracking, and transaction history.</p>
+                <button class="project-btn">To be done</button>
+              </div>
+            </div>
+
+            <div class="project">
+             <div class="project-img"><i class="fas fa-cloud-sun"></i></div>
+             <div class="project-description">
+               <h3>Weather App</h3>
+              <p>A responsive weather applicatioin using a public API to fetch and display real-time weather data.</p>
+              <button class="project-btn">To be done</button></div>
+             </div>
+              
+            
+          </div>
+        </section>
+        
+        <section id="contact">
+          <h2>Get in touch</h2>
+          <p>If you would like to contact me, use the below email.</p>
+          <p>
+            Email: <a href="mailto:teshomebf@gmail.com">teshomebf@gmail.com</a>
+          </p>
+        </section>
         </div>
-        <div class="intro-text">
-          <h2>Hi, I am <span class="highlight">Teshome</span></h2>
-          <p>I am on my way to become a developer.</p>
-        </div>
-      </section>
-      <section id="about">
-        <h2>About me</h2>
-        <p>
-          I am a self-taught developer in the making from Ethiopia, Yabello who
-          loves to build apps which I believe will change my community in
-          technology.
-        </p>
-      </section>
-      <section id="skill">
-        <h2>Skills <span class="inline">(In progress)</span></h2>
-        <ul>
-          <li>HTML and CSS</li>
-          <li>JavaScript (ES6+)</li>
-          <li>Git and GitHub</li>
-        </ul>
-      </section>
-      <section id="projects">
-        <h2>Projects</h2>
-        <p>
-          This portfolio website you are reading itself is one of the project I
-          am working on.
-        </p>
-        <p>Other projects I will build will be listed here.</p>
-      </section>
+       
       
-      <section id="contact">
-        <h2>Contact</h2>
-        <p>If you would like to contact me, use the below email.</p>
-        <p>
-          Email: <a href="mailto:teshomebf@gmail.com">teshomebf@gmail.com</a>
-        </p>
-      </section>
-      </div>
-    </main>
-    <div class="sidebar-container">
+      </main>
+    
       <aside id="resources" aria-label="Learning resources">
         <h2>Resources</h2>
         <ul class="resources-list">
@@ -100,9 +184,9 @@
           <li><a href="https://mimo.org" target="_blank">Mimo</a></li>
         </ul>
       </aside>
-      </div>
+    </div>
     <footer>
-      <p>&copy; 2025 Teshome. All rights reserved.</p>
+      <p>&copy; 2026 Teshome. All rights reserved.</p>
     </footer>
     <script src="script.js"></script>
   </body>
