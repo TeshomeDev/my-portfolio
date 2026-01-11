@@ -1,7 +1,6 @@
 
 
 
-
 :root {
   --primary-color: #0948ac;
   --secondary-color: #6c60d3;
@@ -27,6 +26,7 @@
 /*=========================
        GENERAL STYLE
   =========================*/
+  
 *, 
 *::before,
 *::after {
@@ -46,14 +46,15 @@ body {
   font-size: var(--text-size);
   line-height: 1.6;
   background-color: var(--bg-light2);
+ 
+}
+  
+
+header, main, footer {
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
-main,
-header,
-footer {
-  max-width: 1400px;
-  margin-inline: auto;
-}
 
 a:focus-visible, button:focus-visible {
   outline: 2px solid var(--secondary-color);
@@ -65,6 +66,7 @@ a:focus-visible, button:focus-visible {
        HEADER STYLE
   =========================*/
 
+  
   .header {
     min-height: 5rem;
     padding: var(--container-padding);
@@ -82,7 +84,7 @@ a:focus-visible, button:focus-visible {
   }
 
   .header .logo {
-    font-size: clamp(1.5rem, 2vw, 3rem);
+    font-size: clamp(1.6rem, 2vw, 3rem);
     font-weight: bold;
     display: flex;
     justify-content: center;
@@ -96,13 +98,15 @@ a:focus-visible, button:focus-visible {
     margin-right: 1rem;
   }
 
+
+
   /*========================
       MAIN PAGE STYLE
     ========================*/
 
+    
   .main-page-container {
   padding-top: 7rem;
-  
 }
   
 
@@ -117,7 +121,7 @@ section {
   justify-content: center;
   align-items: center;
   font-size: 4rem;
-  padding: var(--padding1);
+  padding: var(--normal-padding);
   font-family: "Goldman", sans-serif;
   overflow: hidden;
 }
@@ -146,9 +150,15 @@ section {
   }
 }
 
+
+
 .hero {
+  
     display: grid;
+    
     grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+
+
 
     border: 1px solid gray;
     border-radius: 6px;
@@ -180,8 +190,8 @@ section {
   .content-wrapper h2 {
     margin-bottom: 3rem;
     font-size: 3rem;
-    margin-left: clamp(-1rem, -4vw, -16rem);
-    color: var(--secondary-color)
+    margin-left: clamp(-2rem, -4vw, -16rem);
+    color: var(--secondary-color);
   }
 
   .content-wrapper h2::before {
@@ -203,6 +213,7 @@ section {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
     gap: 4rem;
+    
     padding: 3rem;
     
   }
@@ -312,15 +323,21 @@ section {
     color: var(--primary-color)
   }
 
+  
+
   footer {
     background-color: #0e2b53;
     color: var(--text-color-light);
     padding: var(--container-padding);
+    width: 100%;
   }
+    
 
   /*========================
         MOBILE LAYOUT
     ========================*/
+
+    
 @media (max-width: 768px) {
 
   .header .navbar {
@@ -342,7 +359,11 @@ section {
     z-index: 99;
   }
 
+  
+
   /*MOBILE MENU BUTTON*/
+
+  
   .hamburger-menu {
     background-color: inherit;
     border: none;
@@ -437,22 +458,30 @@ section {
   
 }
 
+
 }
 
 @media (max-width: 400px) {
   .logo span {
-    font-size: 1.2rem;
-    font-weight: normal;
+    font-size: 1.8rem;
   }
   .menu-text {
     display: none;
-  }
 }
+
+body {
+  display: grid;
+}
+
+}
+
+
 
 
  /*========================
         DESKTOP LAYOUT
     ========================*/
+    
 @media (min-width: 768px) {
 
   .header {
