@@ -8,7 +8,7 @@
   --text-color-light: #fff;
   --text-color-dark: #222;
 
-  --text-size: clamp(1.6rem, 2vw, 2rem);
+  --text-size: clamp(16px, 4vw, 18px);
 
   --box-shadow1: 0 2px 4px rgba(0, 0, 0, 0.2);
   --box-shadow2: 0 4px 14px -1px rgba(0, 0, 0, 0.2);
@@ -522,7 +522,7 @@ color: red;
 body {
   display: grid;
  /* Prevent layout constraint on very small viewports */
-  font-size: 1.8rem;
+  font-size: 18px;
 }
 
 }
