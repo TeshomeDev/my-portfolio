@@ -249,6 +249,47 @@ section {
   color: #e00;
  }
 
+.carousel {
+  position: relative;
+}
+
+ .slider {
+  width: 60%;
+  margin: 0 auto;
+  overflow: hidden;
+  
+ }
+
+ .slides {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  transition: transform 0.3s ease;
+ }
+
+ .slides img {
+  width: 100%;
+  
+ }
+
+ .arrow {
+  position: absolute;
+  padding: var(--normal-padding);
+  font-size: 3rem;
+ }
+
+ .arrow.left {
+   top: 50%;
+   transform: translateY(-40px);
+   left: 5rem;
+ }
+
+ .arrow.right {
+   top: 50%;
+   right: 5rem;
+   transform: translateY(-40px);
+ }
+
  .project {
   background-color: var(--bg-light1);
   box-shadow: var(--box-shadow2);
@@ -288,6 +329,10 @@ section {
   background-color: var(--text-color-light);
   outline: 2px solid var(--secondary-color);
   color: var(--text-color-dark);
+ }
+
+ .project-btn.to-be-done:hover {
+color: red;
  }
 
   p {
@@ -471,6 +516,7 @@ section {
 
 body {
   display: grid;
+ /* Prevent layout constraint on very small viewports */
 }
 
 }
