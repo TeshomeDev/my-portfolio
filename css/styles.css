@@ -500,7 +500,7 @@ color: red;
   }
 
   .welcome {
-    height: clamp(6rem, 5vw, 12rem);
+    height: clamp(10rem, 7vw, 12rem);
   }
 .welcome h1 {
   animation: welcomeText 9s linear infinite;
@@ -522,6 +522,7 @@ color: red;
 body {
   display: grid;
  /* Prevent layout constraint on very small viewports */
+  font-size: 1.8rem;
 }
 
 }
