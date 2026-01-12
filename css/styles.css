@@ -8,7 +8,7 @@
   --text-color-light: #fff;
   --text-color-dark: #222;
 
-  --text-size: clamp(1.6rem, 1.6vw, 1.8rem);
+  --text-size: clamp(1.6rem, 2vw, 2rem);
 
   --box-shadow1: 0 2px 4px rgba(0, 0, 0, 0.2);
   --box-shadow2: 0 4px 14px -1px rgba(0, 0, 0, 0.2);
@@ -189,6 +189,7 @@ section {
 
   .content-wrapper h2 {
     margin-bottom: 3rem;
+    margin-top: 4rem;
     font-size: 3rem;
     margin-left: clamp(-2rem, -4vw, -16rem);
     color: var(--secondary-color);
@@ -249,6 +250,11 @@ section {
   color: #e00;
  }
 
+ /* Certification section */
+
+ .certification-desc {
+  margin-bottom: 5rem;
+ }
 .carousel {
   position: relative;
 }
@@ -264,7 +270,6 @@ section {
   display: flex;
   flex-direction: row;
   width: 100%;
-  transition: transform 0.3s ease;
  }
 
  .slides img {
