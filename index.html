@@ -116,7 +116,7 @@
           </div>
         </section>
         <section class="certifications">
-          <h2>Certifications</h2>
+          <h2>Certification</h2>
 
           <p class="certification-desc">These are the Certificates I have earned by completing various programming and web development courses. They demonstrate my dedication and determination to become the real developer I wanted to be. </p>
           <div class="carousel">
@@ -182,14 +182,30 @@
         
         <section id="contact">
           <h2>Get in touch</h2>
-          <p>If you would like to contact me, use the below email.</p>
-          <p>
-            Email: <a href="mailto:teshomebf@gmail.com">teshomebf@gmail.com</a>
-          </p>
+          <p>If you would like to contact me, use the form below.</p>
+          <div class="form-container">
+            <p>Thanks for your contact and time</p>
+
+            <form action="" class="contact-form">
+              <h3>Let me hear from you</h3>
+            <label for="name">Full Name: </label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="location">Location: </label>
+            <input type="text" id="location" name="location" required>
+            
+            <label for="email">Email: </label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Your feedback: </label>
+            <textarea name="feedback" id="message" cols="50" rows="6"></textarea>
+
+            <button type="submit">Send</button>
+           </form>
+          </div>
+           
         </section>
         </div>
-       
-      
       </main>
     
       <aside id="resources" aria-label="Learning resources">
@@ -200,10 +216,24 @@
           <li><a href="https://www.w3schools.com" target="_blank">W3Schools</a></li>
           <li><a href="https://www.geeksforgeeks.org" target="_blank">GeeksforGeeks</a></li>
           <li><a href="https://mimo.org" target="_blank">Mimo</a></li>
+          <li><a href="https://www.sololearn.com" target="_blank">Sololearn</a></li>
         </ul>
       </aside>
     </div>
     <footer>
+      <div class="footer-contact-container">
+        <div class="phone-email">
+          <div class="phone">Phone: <a href="tel:+251942487372">Call me</a></div>
+          <div class="email">Email: <a href="mailto:teshomebf@gmail.com">teshomebf@gmail.com</a></div>
+        </div>
+        <div class="vertical-bar"></div>
+        <div class="social-media">
+          <div><a href=""><i class="fa-brands fa-github"></i></a></div>
+          <div><a href=""><i class="fa-brands fa-linkedin"></i></a></div>
+          <div><a href=""><i class="fa-brands fa-telegram"></i></a></div>
+        </div>
+      </div>
+    
       <p>&copy; 2026 Teshome. All rights reserved.</p>
     </footer>
     <script src="script.js"></script>

@@ -30,6 +30,19 @@ navLinks.forEach(link => {
     });
 });
 
+navBar.addEventListener('mouseleave', function() {
+    
+     navBar.classList.remove('show-menu');
+    hamburger.classList.remove('close');
+    textMenu.classList.remove('show-menu-text');
+});
+
+document.addEventListener('click', function() {
+    if(!ul.contains(event.target)) {
+       navBar.classList.remove('show-menu');
+    } 
+});
+
 /*
 =====================
 CERTIFICATION SECTION
