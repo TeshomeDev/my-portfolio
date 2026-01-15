@@ -37,9 +37,11 @@ navBar.addEventListener('mouseleave', function() {
     textMenu.classList.remove('show-menu-text');
 });
 
+const ul = document.querySelector('.header')
 document.addEventListener('click', function() {
     if(!ul.contains(event.target)) {
        navBar.classList.remove('show-menu');
+       hamburger.classList.remove('close');
     } 
 });
 

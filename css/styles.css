@@ -343,6 +343,10 @@ color: red;
 
  /* Contact section */
 
+ .contact > p {
+  padding: var(--normal-padding);
+ }
+
  .form-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
@@ -476,9 +480,10 @@ outline: 1px solid #0ca106;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    text-align: left;
+    flex-wrap: wrap;
     padding: var(--container-padding);
-    
+    text-align: left;
+    gap: 2rem;
   }
 
   .phone-email a {
