@@ -331,6 +331,16 @@ p {
   transition: background-color 0.2s linear;
  }
 
+ .project-btn.in-progress a {
+  text-decoration: none;
+  color: var(--text-color-light);
+ }
+
+ .project-btn.in-progress a:hover {
+  color: darkorange;
+  
+ }
+
  .project-btn:hover {
   background-color: var(--text-color-light);
   outline: 2px solid var(--secondary-color);
