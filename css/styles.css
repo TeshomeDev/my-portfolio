@@ -144,7 +144,7 @@ p {
   }
 
   50% {
-    font-size: 3vw;
+    font-size: 5vw;
     color: rgb(201, 201, 8);
   }
  
@@ -380,7 +380,8 @@ text-align: left;
 
  .contact-form h3 {
   text-align: center;
-  margin-bottom: 3rem;;
+  margin-bottom: 3rem;
+  color: var(--primary-color)
  }
 
  .contact-form label, 
@@ -649,7 +650,7 @@ outline: 1px solid #0ca106;
 
 }
 
-@media (max-width: 400px) {
+@media (max-width: 500px) {
   .logo span {
     font-size: 1.8rem;
   }
@@ -664,6 +665,10 @@ body {
 
 p {
   font-size: 18px;
+}
+
+footer .vertical-bar {
+  display: none;
 }
 
 }
