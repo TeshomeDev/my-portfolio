@@ -292,12 +292,12 @@ p {
  .arrow.left {
    top: 50%;
    transform: translateY(-40px);
-   left: 4rem;
+   left: 3rem;
  }
 
  .arrow.right {
    top: 50%;
-   right: 4rem;
+   right: 3rem;
    transform: translateY(-40px);
  }
 
@@ -678,6 +678,18 @@ footer .vertical-bar {
   white-space: nowrap;
   
 }
+
+.arrow.left {
+   top: 50%;
+   transform: translateY(-40px);
+   left: 2rem;
+ }
+
+ .arrow.right {
+   top: 50%;
+   right: 2rem;
+   transform: translateY(-40px);
+ }
 
 
 }
