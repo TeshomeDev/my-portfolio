@@ -682,12 +682,12 @@ footer .vertical-bar {
 .arrow.left {
    top: 50%;
    transform: translateY(-40px);
-   left: 2rem;
+   left: 4rem;
  }
 
  .arrow.right {
    top: 50%;
-   right: 2rem;
+   right: 4rem;
    transform: translateY(-40px);
  }
 
