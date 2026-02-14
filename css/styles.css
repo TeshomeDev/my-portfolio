@@ -169,7 +169,31 @@ p {
   }
 
   .about-description {
+    text-align: left;
     padding: 2rem;
+  }
+
+  .about-description h2 {
+    text-align: center;
+  }
+
+  .catalyst {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .catalyst cite {
+    color: var(--primary-color);
+    padding: 0 1rem;
+  }
+
+  .catalyst cite, small {
+    font-weight: bold;
+  }
+
+  .catalyst img {
+    max-width: 40%;
   }
 
 
@@ -276,12 +300,12 @@ p {
  .arrow.left {
    top: 50%;
    transform: translateY(-40px);
-   left: 3rem;
+   left: 10rem;
  }
 
  .arrow.right {
    top: 50%;
-   right: 3rem;
+   right: 10rem;
    transform: translateY(-40px);
  }
 
@@ -664,16 +688,19 @@ footer .vertical-bar {
     visibility: visible;
   }
 
+  .catalyst {
+    flex-wrap: wrap;
+  }
 
 .arrow.left {
    top: 50%;
    transform: translateY(-40px);
-   left: 4rem;
+   left: 2rem;
  }
 
  .arrow.right {
    top: 50%;
-   right: 4rem;
+   right: 2rem;
    transform: translateY(-40px);
  }
 
