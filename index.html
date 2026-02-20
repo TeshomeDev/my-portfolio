@@ -15,7 +15,7 @@
       <div class="logo"> <img
             src="./Assets/images/mypictures/profile-picture1.png"
             alt="Profile Picture of Teshome"/>
-          <span>The Enthusiast Developer</span>
+          <h1>The Enthusiast Developer</h1>
       </div>
         
         <div id="btn" class="hamburger-menu">
@@ -43,18 +43,12 @@
       <main id="main">
        <div class="hero-wrapper">
         <section class="hero" id="home">
-
-          <div class="welcome">
-              <h1>Welcome To My Portfolio</h1>
-          </div>
             
-          <div class="hero-section">
+          <div class="hero-content">
             <div class="hero-image">
                 <img
                 src="./Assets/images/mypictures/profile-picture1.png"
                 alt="Profile Picture of Teshome"
-                width="200"
-                height="200"
               />
             </div>
             <div class="hero-text">
@@ -67,18 +61,28 @@
         
 
         <div class="content-wrapper">
-           <section id="about" class="about-description">
-          <h2>About me</h2>
-          <p>
-            I am a self-taught aspiring web developer from Ethiopia, Yabello, currently learning the foundations of web development.
-          </p>
+           <section id="about">
+            <div class="about-description">
+              <h2>About me</h2>
+              <p>
+                I am a self-taught aspiring web developer from Ethiopia, Yabello, currently learning the foundations of web development.
+              </p>
 
-          <h3>
+              <p>
+              Right now I'm focused on the core technologies of the web: HTML, CSS, and JavaScript, and in the next phase my focus will be on frameworks and backend technologies to become a fullstack developer.
+              </p>
+              <p>
+                When I'm not coding , I enjoy exploring tech blogs, practicing new coding challenges, and learning about the latest web development trends.
+              </p>
+            </div>
+
+            <h3>
               How I began my programming journey
-          </h3>
+              </h3>
+                    
           <div class="catalyst">
-            <div>
-
+            <div class="decription">
+              
             <p>
               I’ve always been drawn to the idea of self-employment: building something of my own without the need for a boss or a crowded office. However, identifying the right path to get there proved difficult until I encountered <cite>the Millionaire FASTLANE</cite> <small> by MJ DeMarco</small>.
             </p>
@@ -87,18 +91,11 @@
               The book reframed my perspective on income and value, leading me directly to programming. I saw code not just as a technical skill, but as a tool for liberation. It presented a clear path: learn to build software, sell a product, and create a scalable business. This realization was the catalyst for my coding journey. I am now dedicated to mastering this craft so I can build the independent future I envisioned.
             </p>
             </div>
-            
-
-            <img src="./Assets/images/mypictures/Screenshot-fastlane-book-coverpage.png" alt="The Millionaire FastLane Book Coverpage">
+            <div class="catalyst-image">
+              <img src="./Assets/images/mypictures/Screenshot-fastlane-book-coverpage.png" alt="The Millionaire FastLane Book Coverpage">
+            </div>
           </div>
-          
-          
-          <p>
-           Right now I'm focused on the core technologies of the web: HTML, CSS, and JavaScript, and in the next phase my focus will be on frameworks and backend technologies to become a fullstack developer.
-          </p>
-          <p>
-            When I'm not coding , I enjoy exploring tech blogs, practicing new coding challenges, and learning about the latest web development trends.
-          </p>
+        
         </section>
         <section id="skill" class="skills">
           <h2>My Skills</h2>
@@ -176,7 +173,7 @@
               <div class="project-description">
                 <h3>Voting System</h3>
               <p>A voting system that models poll data using JavaScript <code>Map</code> and enforces single-vote rules with <code>Set</code>.</p>
-              <button class="project-btn to-be-done">To be done</button>
+              <a href="#" class="project-btn to-be-done">To be done</a>
               </div>
               </div>
 
@@ -185,7 +182,7 @@
               <div class="project-description">
                 <h3>Bank Account Management</h3>
                 <p>A JavaScript application that simulates real banking operations including deposits, withdrawals, balance tracking, and transaction history.</p>
-                <button class="project-btn to-be-done">To be done</button>
+                 <a href="#" class="project-btn to-be-done">To be done</a>
               </div>
             </div>
 
@@ -194,7 +191,7 @@
              <div class="project-description">
                <h3>Weather App</h3>
               <p>A responsive weather applicatioin using a public API to fetch and display real-time weather data.</p>
-              <button class="project-btn to-be-done">To be done</button></div>
+               <a href="#" class="project-btn to-be-done">To be done</a>
              </div>
               
             
@@ -205,10 +202,9 @@
           <h2>Get in touch</h2>
           <p>If you would like to contact me, use the form below.</p>
           <div class="form-container">
-            <p>Thanks for your contact and time</p>
+            <h3>Let me hear from you</h3>
 
             <form action="https://formspree.io/f/xnjjovjv" method="POST" class="contact-form">
-              <h3>Let me hear from you</h3>
             <label for="name">Full Name: </label>
             <input type="text" id="name" name="name" required>
 
@@ -254,7 +250,7 @@
           <div><a href=""><i class="fa-brands fa-telegram"></i></a></div>
         </div>
       </div>
-    
+    <hr>
       <p>&copy; 2026 Teshome. All rights reserved.</p>
     </footer>
     <script src="script.js"></script>
