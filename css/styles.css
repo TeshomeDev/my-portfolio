@@ -153,6 +153,14 @@ p {
     text-align: center;
   }
 
+  .catalyst-image figcaption {
+    font-style: italic;
+    border-left: 1px solid var(--secondary-color);
+    border-radius: 0.4rem;
+    padding-left: var(--normal-padding);
+    margin-top: 0.8rem;
+  }
+
   .catalyst {
     display: flex;
     flex-direction: column;
@@ -165,6 +173,10 @@ p {
   .catalyst cite {
     color: var(--primary-color);
     padding: 0 1rem;
+  }
+
+  .catalyst cite a {
+    text-decoration: none;
   }
 
   .catalyst cite, small {
@@ -208,6 +220,7 @@ p {
     color: #0e2b53;
   }
 
+
   .skills-category {
     padding: var(--container-padding);
     background-color: var(--bg-light1);
@@ -216,13 +229,16 @@ p {
     transition: transform 0.3s linear;
   }
 
+  .skills-category h3 > span {
+    font-size: var(--text-size-normal);
+    font-weight: 200;
+  }
+
   .skills-category:hover {
     transform: translateY(-8px);
   }
 
  .skills-category .inline {
-  font-size: 1.5rem;
-  font-weight: normal;
   font-family:cursive, sans-serif;
  }
 
@@ -580,6 +596,11 @@ footer .vertical-bar {
 
   .social-media div a {
     font-size: var(--text-size-extra-large);
+  }
+
+  .skills-category h3 > span {
+    font-size: var(--text-size-medium);
+    font-weight: 200;
   }
 
   .header .navbar {
