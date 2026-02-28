@@ -19,6 +19,7 @@
   --box-shadow2: 0 4px 14px -1px rgba(0, 0, 0, 0.2);
   
   --normal-padding: 1rem;
+  --medium-padding: 1.6rem;
   
 
   --container-padding: clamp(1.5rem, 3vw, 2rem); 
@@ -726,7 +727,7 @@ footer .vertical-bar {
  .contact-form textarea, 
  .contact-form [type="submit"] {
   font-size: var(--text-size-large);
-  padding: var(--normal-padding);
+  padding: var(--medium-padding);
  }
 
  footer hr {
