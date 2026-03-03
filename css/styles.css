@@ -1,6 +1,5 @@
 
 
-
 :root {
   --primary-color: #0948ac;
   --secondary-color: #6c60d3;
@@ -19,7 +18,7 @@
   --box-shadow2: 0 4px 14px -1px rgba(0, 0, 0, 0.2);
   
   --normal-padding: 1rem;
-  --medium-padding: 1.6rem;
+  --medium-padding: 1.2rem;
   
 
   --container-padding: clamp(1.5rem, 3vw, 2rem); 
@@ -42,9 +41,15 @@
   box-sizing: border-box;
 }
 
+
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
+  
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 
 body {
@@ -159,6 +164,7 @@ p {
     border-radius: 0.4rem;
     padding-left: var(--normal-padding);
     margin-top: 0.8rem;
+    text-align: left;
   }
 
   .catalyst {
@@ -208,7 +214,7 @@ p {
 
   .skills-container, .projects-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
     gap: 4rem;
     
     padding: 3rem;
@@ -323,7 +329,7 @@ p {
 
  .project-btn {
   display: inline-block;
-  padding: 5px 0;
+  padding: 0.8rem 0;
   border: none;
   background-color: var(--secondary-color);
   color: var(--text-color-light);
@@ -539,10 +545,8 @@ aside {
     ========================*/
 
 
-    @media (max-width: 400px) {
-  .logo span {
-    font-size: 1.8rem;
-  }
+    @media (max-width: 360px) {
+  
   .menu-text {
     display: none;
 }
@@ -551,6 +555,7 @@ aside {
 body {
   display: grid;
  /* Prevent layout constraint on very small viewports */
+ font-size: 1.2rem;
 }
 
 footer .vertical-bar {
@@ -559,48 +564,43 @@ footer .vertical-bar {
 
 }
 
+
     
 @media (max-width: 768px) {
 
   h2 {
-    font-size: var(--text-size-extra-large);
+    font-size: var(--text-size-medium);
   }
 
   h3 {
-    font-size: var(--text-size-large);
+    font-size: var(--text-size-normal);
   }
 
-  p {
-    font-size: var(--text-size-large);
+  p, .skill-item, li a, footer div  {
+    font-size: var(--text-size-small);
   }
 
-  .skill-item {
-    font-size: var(--text-size-large);
-  }
 
-  li a {
-    font-size: var(--text-size-large);
-  }
-
-  footer div {
-    font-size: var(--text-size-large);
-  }
  
-  footer .phone a {
-    font-size: var(--text-size-medium);
-  }
-
-  footer .email a {
-    font-size: var(--text-size-medium);
+  footer .phone a, footer .email a {
+    font-size: var(--text-size-normal);
   }
 
   .social-media div a {
-    font-size: var(--text-size-extra-large);
+    font-size: var(--text-size-medium);
   }
 
   .skills-category h3 > span {
-    font-size: var(--text-size-medium);
+    font-size: var(--text-size-normal);
     font-weight: 200;
+  }
+
+  .header {
+    height: 4rem;
+  }
+
+  .header h1 {
+    font-size: var(--text-size-normal);
   }
 
   .header .navbar {
@@ -659,7 +659,7 @@ footer .vertical-bar {
   .bar {
      display: block;
      width: 3rem;
-     height: 0.35rem;
+     height: 0.20rem;
      margin: 0.18rem 0;
      background-color: var(--bg-light2);
      border-radius: 0.6rem;
@@ -724,30 +724,43 @@ footer .vertical-bar {
     width: 100%;
   }
 
+.content-wrapper h2 {
+  margin-left: 0;
+}
+
+.catalyst-image img {
+  width: 90%;
+  max-width: 200px;
+}
 
 .arrow.left {
    top: 50%;
    transform: translateY(-40px);
    left: 2rem;
-   font-size: var(--text-size-extra-large);
+   font-size: var(--text-size-medium);
  }
 
  .arrow.right {
    top: 50%;
    right: 2rem;
    transform: translateY(-40px);
-   font-size: var(--text-size-extra-large);
+   font-size: var(--text-size-medium);
  }
 
+
  .project-description a {
-  font-size: var(--text-size-large);
+  font-size: var(--text-size-normal);
+ }
+
+ .form-container h3 {
+  font-size: var(--text-size-medium);
  }
 
  .contact-form label, 
  .contact-form input, 
  .contact-form textarea, 
  .contact-form [type="submit"] {
-  font-size: var(--text-size-large);
+  font-size: var(--text-size-small);
   padding: var(--medium-padding);
  }
 
@@ -768,7 +781,7 @@ footer .vertical-bar {
 @media (min-width: 768px) {
 
   .logo h1 {
-    font-size: 3rem;
+    font-size: var(--text-size-medium);
   }
 
   p {
@@ -776,7 +789,7 @@ footer .vertical-bar {
     }
 
     .social-media div a {
-    font-size: var(--text-size-large);
+    font-size: var(--text-size-medium);
   }
 
   .header {
@@ -808,7 +821,6 @@ footer .vertical-bar {
     font-size: 1.6rem;
   }
   
-
   .main-page-container {
     display: grid;
     grid-template-columns: 3fr 1fr;
@@ -831,10 +843,6 @@ footer .vertical-bar {
     width: 55%;
     text-align: left;
   }
-
-  .hero-text h2 {
-      font-size: 2rem;
-    }
 
   
   .catalyst {
@@ -865,6 +873,7 @@ footer .vertical-bar {
     position: sticky;
     top: 7rem;
     left: 2rem;
+    right: 1rem;
     align-self: start;
   }
 
@@ -876,5 +885,4 @@ footer .vertical-bar {
   }
 
 }
-
 
