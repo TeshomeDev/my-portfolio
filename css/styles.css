@@ -1,4 +1,8 @@
 
+/*=========================
+       VARIABLES
+  =========================*/
+
 :root {
   /* ===== COLORS ===== */
   --color-bg: #ffffff;
@@ -41,11 +45,9 @@
 
 
 /*=========================
-       BASE STYLE
+       RESET
   =========================*/
   
-
-  /* ===== Box Sizing and Reset ===== */
 *, 
 *::before,
 *::after {
@@ -54,7 +56,13 @@
   box-sizing: border-box;
 }
 
-/* ===== Typography ===== */
+/*=========================
+       BASE STYLE
+  =========================*/
+
+  html {
+  scroll-behavior: smooth;
+}
 
 body {
   font-family: var(--font-primary);
@@ -70,7 +78,7 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.3;
 }
 
-h1 { font-size: var(--text-size-md);}
+h1 { font-size: var(--text-size-sl);}
 h2 { font-size: var(--text-size-lg);}
 h3 { font-size: var(--text-size-md);}
 h4 { font-size: var(--text-size-nl);}
@@ -80,7 +88,6 @@ p {
   margin-bottom: var(--space-sm);
 }
 
-/* ===== Spacing ===== */
 
 section {
   margin-top: var(--space-md);
@@ -100,10 +107,6 @@ h3 {
   margin-bottom: var(--space-nl);
 }
 
-.card {
-  margin-bottom: var(--space-md);
-}
-
 footer {
   padding: var(--space-sm);
 }
@@ -113,9 +116,6 @@ img {
       height: auto;
       display: block;
     }
-
-
-/* ===== Links, Buttons and List ===== */
 
 a {
   color: var(--color-accent);
@@ -142,35 +142,29 @@ li {
   list-style-position: inside;
 }
 
-/* ===== Layout ===== */
-
-.card {
-  background-color: var(--color-surface);
-  border-radius: var(--radius-md);
-  padding: var(--space-md);
-  box-shadow: 0 4px 4px rgba(0,0,0,0.1);
-}
-
-/* ===== Hover and Focus ===== */
-
 button:focus,
 input:focus {
   outline: 2px solid var(--color-accent);
   outline-offset: 2px;
 }
 
+textarea {
+  width: 100%;
+ }
+
 
 
 
 /*=========================
-          MOBILE
+           LAYOUT 
   =========================*/
 
-html {
-  scroll-behavior: smooth;
-}
 
- .header {
+  /*=========================
+          COMPONENTS
+  =========================*/
+
+  .header {
   position: sticky;
   top: 0;
   width: 100%;
@@ -240,10 +234,6 @@ html {
   border-radius: var(--radius-sm);
 }
 
-.show-menu {
-  transform: translateX(-0px);
-}
-
 .hamburger-menu.close {
   opacity: 0;
 }
@@ -253,21 +243,32 @@ html {
   margin: var(--space-sm) 0;
 }
 
-textarea {
-  width: 100%;
- }
+  .card {
+  background-color: var(--color-surface);
+  border-radius: var(--radius-md);
+  padding: var(--space-md);
+  box-shadow: 0 4px 4px rgba(0,0,0,0.1);
+}
+
+.card {
+  margin-bottom: var(--space-md);
+}
 
 
-  /*========================
-            TABLET
-    ========================*/
+  /*=========================
+          UTILITIES
+  =========================*/
 
-   
+.show-menu {
+  transform: translateX(-0px);
+}
+
+  /*=========================
+          MEDIA QUERY
+  =========================*/
 
 
-    /*========================
-            DESKTOP
-    ========================*/
+
   
 
   
