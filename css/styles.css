@@ -159,23 +159,39 @@ textarea {
            LAYOUT 
   =========================*/
 
+  .container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--space-sm);
+  }
+
 
   /*=========================
           COMPONENTS
   =========================*/
 
   .header {
+  /* === Structure === */
   position: sticky;
   top: 0;
   width: 100%;
   padding: var(--space-xs);
+
+  /* === Skin === */
   background-color: var(--color-bg);
   border-bottom: 1px solid var(--color-text-secondary);
   opacity: 0.9;
+
+  /* === Behavior === */
+  
  }
 
 
 .logo {
+  /* === Structure === */
+  /* === Skin === */
+  /* === Behavior === */
   display: flex;
   justify-content: space-between;
   align-items: center;
