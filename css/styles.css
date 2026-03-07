@@ -61,7 +61,7 @@
   =========================*/
 
   html {
-  font-size: 100%;
+  font-size: clamp(1rem, 0.5rem + 1vw, 1.5rem);
   scroll-behavior: smooth;
 }
 
@@ -290,15 +290,11 @@ textarea {
   =========================*/
 
 @media (min-width: 768px) {
-  html {
-    font-size: 112.5%;
-  }
+ 
 }
 
 @media (min-width: 1200px) {
-  html {
-    font-size: 125%;
-  }
+  
 }
 
   
