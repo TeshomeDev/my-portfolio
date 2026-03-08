@@ -21,6 +21,7 @@
   --text-size-xl: 1.8rem;
 
   /* ===== SPACING SCALE ===== */
+  --space-1xs: 0.25rem;
   --space-xs: 0.5rem;
   --space-sm: 1rem;
   --space-nl: 1.5rem;
@@ -28,6 +29,7 @@
   --space-lg: 3rem;
   --space-xl: 4rem;
   --space-2xl: 5rem;
+  --space-3xl: 7rem;
 
   /* ===== TYPOGRAPHY ===== */
   --font-primary: 'Outfit', sans-serif;
@@ -138,13 +140,17 @@ li {
   list-style-position: inside;
 }
 
+small {
+  font-weight: var(--font-weight-regular);
+}
+
 button:focus,
 input:focus {
   outline: 2px solid var(--color-accent);
   outline-offset: 2px;
 }
 
-textarea {
+input, textarea {
   width: 100%;
  }
 
@@ -174,7 +180,7 @@ textarea {
   top: 0;
   width: 100%;
   padding: var(--space-xs);
-
+  z-index: 100;
   /* === Skin === */
   background-color: var(--color-bg);
   border-bottom: 1px solid var(--color-text-secondary);
@@ -186,7 +192,7 @@ textarea {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: var(--space-sm);
+  gap: var(--space-xs);
 }
 
 .logo img {
@@ -207,7 +213,7 @@ textarea {
 .hamburger-menu {
   /* === Structure === */
   position: absolute;
-  top: 3.3rem;
+  top: calc(var(--space-lg) + var(--space-1xs));
   right: var(--space-xs);
   cursor: pointer;
 }
@@ -276,25 +282,158 @@ textarea {
   box-shadow: 0 4px 4px rgba(0,0,0,0.1);
 }
 
+.card:last-child {
+  margin-bottom: 0;
+}
+
 
   /*=========================
           UTILITIES
   =========================*/
 
 .show-menu {
-  transform: translateX(-0px);
+  transform: translateX(0);
 }
 
   /*=========================
           MEDIA QUERIES
   =========================*/
 
+  @media (min-width: 440px) and (max-width: 767px) {
+    .hamburger-menu {
+      display: none;
+    }
+    .navbar {
+      width: 100%;
+      padding: var(--space-xs);
+      transform: translateX(0);
+    }
+    .navbar ul {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: none;
+      border-bottom: 1px solid var(--color-accent);
+    }
+  }
+
+
 @media (min-width: 768px) {
- 
+
+  .hamburger-menu {
+    /* Structure */
+    display: none;
+  }
+
+  .navbar {
+    /* === structure === */
+    padding: 0 var(--space-sm);
+    width: 100%; 
+    /* Skin */
+    border-bottom: 1px solid var(--color-accent);
+    /* Behavior */
+    transform: translateX(0);
+  }
+
+  .navbar ul {
+    /* Structure */
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: var(--space-sm);
+    /* Skin */
+    border: none;
+  }
+
+  .navbar a {
+    /* Structure */
+    padding: var(--space-xs) var(--space-sm);
+    /* Skin */
+    border-radius: var(--radius-sm);
+  }
+
+  .navbar a:hover {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-color: var(--color-accent-hover);
+  }
+
+  .section {
+    scroll-margin-top: var(--space-3xl);
+  }
+
 }
 
 @media (min-width: 1200px) {
+
+  .header {
+    /* === structure === */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--space-md);
+    /* === Skin === */
+  }
+
+  .logo {
+    /* === structure === */
+    justify-content: flex-start;
+    
+  }
+
+  .navbar {
+    /* Structure */
+    position: static;
+    /* Skin */
+    border: none;
+  }
+
+
+  .navbar ul {
+    /* Structure */
+    white-space: nowrap;
+    /* Skin */
+  }
+
+   .navbar ul li {
+    /* === structure === */
+    display: inline-block;
+    margin: 0 var(--space-xs);
   
+  }
+
+  .navbar a {
+    /* === structure === */
+    display: inline-block;
+    padding: 0 var(--space-xs);
+    /* === Skin === */
+    box-shadow: 0 0 0 0.5px var(--color-accent);
+    border-radius: var(--radius-md);
+    /* === Behavior === */
+    transition: background-color var(--transition-smooth), box-shadow var(--transition-smooth);
+  }
+
+  .navbar a:hover {
+    /* === Skin === */
+     background-color: var(--color-accent);
+     color: var(--color-bg);
+     text-decoration: none;
+    /* === Behavior === */ 
+  }
+
+  .navbar a:active {
+    transform: translateY(-1px);
+  }
+
+  .section {
+    scroll-margin-top: calc(var(--space-lg) + var(--space-sm));
+  }
+
+  .section .container {
+    max-width: 800px;
+  }
+
+ 
 }
 
   
