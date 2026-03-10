@@ -304,6 +304,10 @@ input, textarea {
       scroll-margin-top: var(--space-2xl);
     }
 
+    .section .container, .aside .container{
+    max-width: 700px;
+  }
+
     .container.home {
       padding: var(--space-md);
     }
@@ -350,6 +354,10 @@ input, textarea {
 
   .section {
     scroll-margin-top: var(--space-2xl);
+  }
+
+  .section .container, .aside .container{
+    max-width: 800px;
   }
 
   .container.home {
@@ -402,8 +410,8 @@ input, textarea {
     scroll-margin-top: calc(var(--space-lg) + var(--space-sm));
   }
 
-  .section .container {
-    max-width: 800px;
+  .section .container, .aside .container{
+    max-width: 1000px;
   }
 
   .container.home {
