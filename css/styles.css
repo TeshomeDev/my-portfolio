@@ -15,7 +15,7 @@
   --color-accent-hover: #1d4ed8;
 
   /* ===== TEXT SIZES ===== */
-
+  --text-size-xs: 0.725rem;
   --text-size-sm: 0.875rem;
   --text-size-nl: 0.95rem;
   --text-size-md: 1.1rem;
@@ -255,6 +255,10 @@ input, textarea {
   margin-bottom: 0;
 }
 
+.c-write {
+    font-size: var(--text-size-xs);
+  }
+
 
   /*=========================
           UTILITIES
@@ -406,7 +410,6 @@ input, textarea {
       padding: var(--space-xs);
     }
 
- 
 }
 
   
