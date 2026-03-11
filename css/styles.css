@@ -15,12 +15,12 @@
   --color-accent-hover: #1d4ed8;
 
   /* ===== TEXT SIZES ===== */
-  --text-size-xs: 0.725rem;
-  --text-size-sm: 0.875rem;
-  --text-size-nl: 0.95rem;
-  --text-size-md: 1.1rem;
-  --text-size-lg: 1.4rem;
-  --text-size-xl: 1.8rem;
+  --text-xs: 0.725rem;
+  --text-sm: 0.875rem;
+  --text-nl: 0.95rem;
+  --text-md: 1.1rem;
+  --text-lg: 1.4rem;
+  --text-xl: 1.8rem;
 
   /* ===== SPACING SCALE ===== */
   --space-2xs: 0.175rem;
@@ -73,7 +73,7 @@
 body {
   font-family: var(--font-primary);
   color: var(--color-text-primary);
-  font-size: var(--text-size-nl);
+  font-size: var(--text-nl);
   background-color: var(--color-bg);
   line-height: 1.6;
   position: relative;
@@ -84,10 +84,10 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.3;
 }
 
-h1 { font-size: var(--text-size-md);}
-h2 { font-size: var(--text-size-lg);}
-h3 { font-size: var(--text-size-md);}
-h4 { font-size: var(--text-size-nl);}
+h1 { font-size: var(--text-md);}
+h2 { font-size: var(--text-lg);}
+h3 { font-size: var(--text-md);}
+h4 { font-size: var(--text-nl);}
 
 p {
   color: var(--color-text-secondary);
@@ -255,7 +255,7 @@ input, textarea {
   margin-bottom: 0;
 }
 
-.c-write {
+.copy-right {
     font-size: var(--text-size-xs);
   }
 
@@ -266,6 +266,50 @@ input, textarea {
 
 .show-menu {
   transform: translateX(0);
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-bold {
+  font-weight: var(--font-weight-bold);
+}
+
+.d-block {
+  display: block;
+}
+
+.d-none {
+  display: none;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.h-full {
+  height: 100vw;
+}
+
+.d-grid {
+  display: grid;
 }
 
   /*=========================
@@ -367,14 +411,7 @@ input, textarea {
 }
 
 @media (min-width: 1200px) {
-
-  /* 
-   * {
-    outline: 1px solid red;
-  }
-  */
  
-
   .navbar {
     /* Structure */
     position: static;
