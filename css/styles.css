@@ -97,11 +97,12 @@ p {
 
 section {
   margin-top: var(--space-lg);
-  scroll-margin-top: var(--space-lg);
+  scroll-margin-top: var(--space-xl);
 }
 
 aside, footer {
   margin-top: var(--space-md);
+  
 }
 
 h2 {
@@ -113,7 +114,7 @@ h3 {
 }
 
 img {
-      max-width: 100%;
+      max-width: 80%;
       height: auto;
       display: block;
     }
@@ -179,6 +180,7 @@ input, textarea {
 
   .header {
   /* === Structure === */
+  padding: var(--space-xs);
   position: fixed;
   top: 0;
   width: 100%;
@@ -234,10 +236,19 @@ input, textarea {
   outline: 1px solid var(--color-bg);
   }
 
+.home {
+  flex-wrap: wrap;
+}  
+
 .hero-image {
   /* === Structure */
-  max-width: 100%;
   margin: var(--space-sm) 0;
+  max-width: calc(var(--space-nl) * 10);
+  padding: 0 var(--space-sm);
+}
+
+.catalyst {
+  flex-wrap: wrap;
 }
 
   .card {
@@ -310,25 +321,32 @@ input, textarea {
 
 .d-grid {
   display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr));
+  gap: var(--space-nl);
 }
 
   /*=========================
           MEDIA QUERIES
   =========================*/
 
-  @media (min-width: 440px) and (max-width: 767px) {
+  @media (min-width: 576px) {
 
 
     .navbar {
-      top: 100%;
-      margin-top: 0.02rem;
-      display: block;
-      width: 100%;
-      transform: translateX(0);
-    }
+    /* === structure === */
+    top: 100%;
+    margin-top: 0.04rem;
+    display: block;
+    width: 100%; 
+    /* Skin */
+    border-bottom: 1px solid var(--color-accent);
+    /* Behavior */
+    transform: translateX(0);
+  }
+
     .nav-items {
       display: flex;
-      justify-content: center;
+      justify-content: flex-end;
       align-items: center;
       padding: 0 var(--space-xs);
       border: none;
@@ -348,15 +366,28 @@ input, textarea {
       scroll-margin-top: var(--space-2xl);
     }
 
-    .section .container, .aside .container{
-    max-width: 700px;
+    .section, .aside {
+    margin: 0 auto;
+    margin-top: var(--space-xl);
   }
 
-    .container.home {
-      padding: var(--space-md);
+    .home {
+      padding-top: var(--space-xl);
+      flex-wrap: nowrap;
+      gap: var(--space-lg);
     }
-    
+
+    .hero-image {
+      border-radius: 50%;
+    }
+
+    .catalyst {
+  flex-wrap: nowrap;
+  gap: var(--space-nl);
+}
+
   }
+
 
 
 @media (min-width: 768px) {
@@ -365,30 +396,6 @@ input, textarea {
     /* Structure */
     display: none;
   }
-
-
-  .navbar {
-    /* === structure === */
-    top: 100%;
-    margin-top: 0.04rem;
-    display: block;
-    width: 100%; 
-    /* Skin */
-    border-bottom: 1px solid var(--color-accent);
-    /* Behavior */
-    transform: translateX(0);
-  }
-
-  .nav-items {
-    /* Structure */
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    gap: var(--space-sm);
-    /* Skin */
-    border: none;
-  }
-
 
   .nav-link:hover {
     text-decoration: underline;
@@ -400,13 +407,9 @@ input, textarea {
     scroll-margin-top: var(--space-2xl);
   }
 
-  .section .container, .aside .container{
-    max-width: 800px;
+  .section, aside {
+    max-width: 90%;
   }
-
-  .container.home {
-      padding: var(--space-md);
-    }
 
 }
 
@@ -418,6 +421,14 @@ input, textarea {
     width: auto;
     /* Skin */
     border: none;
+  }
+
+  .nav-items {
+    border: none;
+  }
+
+  .nav-item {
+    margin: 0 var(--space-xs);
   }
 
   .nav-link {
@@ -446,14 +457,6 @@ input, textarea {
   .section {
     scroll-margin-top: calc(var(--space-lg) + var(--space-sm));
   }
-
-  .section .container, .aside .container{
-    max-width: 1000px;
-  }
-
-  .container.home {
-      padding: var(--space-xs);
-    }
 
 }
 
