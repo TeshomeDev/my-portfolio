@@ -199,6 +199,7 @@ input, textarea {
 
 .navbar {
   /* === Structure === */
+  width: 30%;
   position: absolute;
   top: 100%;
   margin-top: 0.03rem;
@@ -247,7 +248,7 @@ input, textarea {
   padding: 0 var(--space-sm);
 }
 
-  .card {
+.card {
   /* === Structure */
   margin-bottom: var(--space-md);
   padding: var(--space-sm);
@@ -280,6 +281,10 @@ input, textarea {
   border-radius: 6px;
   background-color: var(--color-surface);
   color: var(--color-text-primary)
+}
+
+.form-container {
+  max-width: 40%;
 }
 
 .copy-right {
@@ -342,7 +347,7 @@ input, textarea {
 
 .d-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
   gap: var(--space-md);
   row-gap: 0;
 }
@@ -356,9 +361,6 @@ input, textarea {
 
     .navbar {
     /* === structure === */
-    top: 100%;
-    margin-top: 0.04rem;
-    display: block;
     width: 100%; 
     /* Skin */
     border-bottom: 1px solid var(--color-accent);
@@ -375,7 +377,6 @@ input, textarea {
 
       /* Skin */
       border: none;
-      border-bottom: 1px solid var(--color-accent);
     }
 
     .nav-link:hover {
