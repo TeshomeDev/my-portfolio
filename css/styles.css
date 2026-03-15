@@ -75,7 +75,7 @@ body {
   font-family: var(--font-primary);
   color: var(--color-text-primary);
   font-size: var(--text-nl);
-  background-color: var(--color-bg);
+  background: linear-gradient(var(--color-bg) 80%, rgba(0, 0, 0, 0.2)); 
   line-height: 1.6;
   position: relative;
 }
@@ -290,7 +290,10 @@ input, textarea {
 }
 
 .form-container {
-  /* structure */
+  padding-top: var(--space-md);
+}
+
+.contact-form {
   padding: var(--space-sm);
   /* skin */
   background-color: var(--color-surface);
@@ -358,8 +361,7 @@ outline: none;
 .footer-container {
   /* === structure === */
   flex-wrap: wrap;
-  gap: var(--space-sm)
-  
+  gap: var(--space-sm);  
 }
 
 .social-media {
