@@ -328,6 +328,18 @@ outline: none;
   outline: none;
 }
 
+.res-container {
+  gap: var(--space-lg);
+}
+
+.turorial-list, .ai-list {
+  padding: var(--space-sm);
+}
+
+.list-heading {
+  margin-bottom: var(--space-xs);
+}
+
 .copy-right {
   /* Skin */
     font-size: var(--text-xs);
@@ -475,6 +487,9 @@ outline: none;
       max-width: 50%;
       margin: 0 auto;
     }
+    .res-container {
+  gap: var(--space-2xl);
+}
 
     }
 
