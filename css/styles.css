@@ -259,6 +259,7 @@ input, textarea {
 
 .card {
   /* === Structure */
+  margin-bottom: var(--space-md);
   padding: var(--space-sm);
 
   /* === Skin === */
@@ -301,6 +302,10 @@ input, textarea {
 .project {
   flex-direction: column;
   height: 100%;
+}
+
+.projects-container {
+  row-gap: var(--space-md);
 }
 
 .project-description {
@@ -508,7 +513,7 @@ outline: none;
 .d-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
-  gap: var(--space-md);
+  column-gap: var(--space-md);
 }
 
   /*=========================
