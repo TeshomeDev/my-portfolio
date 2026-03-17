@@ -259,7 +259,6 @@ input, textarea {
 
 .card {
   /* === Structure */
-  margin-bottom: var(--space-md);
   padding: var(--space-sm);
 
   /* === Skin === */
