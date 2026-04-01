@@ -41,6 +41,22 @@ document.addEventListener('click', function() {
     } 
 });
 
+const sections = document.querySelectorAll(".section");
+
+window.addEventListener("scroll", () => {
+    sections.forEach(section => {
+        if(section.classList.contains("visible")) return;
+
+        const rect = section.getBoundingClientRect();
+
+        const triggerPoint = window.innerHeight - (rect.height * 0.20);
+
+        if(rect.top < triggerPoint) {
+            section.classList.add("visible");
+        }
+    });
+});
+
 /*
 =====================
 CERTIFICATION SECTION
