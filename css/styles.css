@@ -192,7 +192,7 @@ input, textarea {
 
   .header {
   /* === Structure === */
-  padding: var(--space-xs);
+  padding: var(--space-xs) 0;
   position: fixed;
   top: 0;
   width: 100%;
