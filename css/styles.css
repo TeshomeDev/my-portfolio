@@ -103,7 +103,7 @@ p {
 
 
 section {
-  margin-top: var(--space-lg);
+  margin-bottom: var(--space-lg);
   scroll-margin-top: var(--space-xl);
 }
 
@@ -277,7 +277,11 @@ input, textarea {
   opacity: 1;
   transform: translateY(0);
 }
+
 .section-title {
+  position: sticky;
+  top: var(--space-xl);
+}
 
 .card {
   /* === Structure */
@@ -320,13 +324,27 @@ input, textarea {
   margin-left: var(--text-sm);
 }
 
+
+.projects-container {
+  row-gap: var(--space-md);
+}
+
+
 .project {
   flex-direction: column;
   height: 100%;
 }
 
-.projects-container {
-  row-gap: var(--space-md);
+#project-tabs-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xs);
+  margin-bottom: var(--space-md);
+}
+
+.project-tab {
+  padding: var(--space-xs) var(--space-sm);
+  border: none;
 }
 
 .project-description {
@@ -402,6 +420,7 @@ input, textarea {
 .input-field {
   padding: var(--space-xs);
   margin-bottom: var(--space-xs);
+  transition: outline var(--transition-smooth1), box-shadow var(--transition-smooth1);
 }
 
 .input-field:focus {
@@ -543,6 +562,14 @@ outline: 1px solid var(--color-accent);
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
   column-gap: var(--space-md);
+}
+
+.project-panel {
+  display: none;
+}
+
+.display-panel {
+  display: block;
 }
 
   /*=========================

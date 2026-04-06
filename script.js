@@ -59,41 +59,56 @@ window.addEventListener("scroll", () => {
 
 /*
 =====================
-CERTIFICATION SECTION
+PROJECTS SECTION
 =====================*/
 
-//carousel for certificates
-const slideContainer = document.querySelector(".slides");
-const slides = document.querySelectorAll(".slides img");
+const projects = ["My Portfolio", "Voting System", "Banking System", "Weather App"];
 
-let slideCounter = 0;
+const projectTabsContainer = document.getElementById("project-tabs-container");
+
+const projectPanels = document.querySelectorAll(".project-panel");
+
+const projectsContainer = document.querySelector(".projects-container");
+
+function createProjectTabs() {
+
+    projects.forEach(project => {
+        const tab = document.createElement("button");
+        tab.classList.add("project-tab");
+        tab.textContent = project;
+        projectTabsContainer.appendChild(tab);
+    });
+}
+
+createProjectTabs();
+
+const projectTabs = document.querySelectorAll(".project-tab");
 
 
-// Right arrow logic for carousel
-const rightArrow = document.querySelector(".arrow.right");
 
-rightArrow.addEventListener('click', () => {
-    slideCounter++;
+projectTabs.forEach(tab => {
+    tab.addEventListener("click", () => {
 
-    if(slideCounter > slides.length - 1) {
-        slideCounter = 0;
-    }
+    projectPanels.forEach(panel => {
+        panel.classList.remove("display-panel");
+    });
 
-    slideContainer.style.transform = `translateX(-${slideCounter * 100}%)`;
+    projectPanels.forEach(panel => {
+                if(panel.dataset.project === tab.textContent) {
+                    panel.classList.add("display-panel");
+                }
 
+        });
+});
 });
 
-// Left arrow logic for carousel
+if(projectTabs.length > 0) {
+    projectTabs[0].click();
+}
 
-const leftArrow = document.querySelector(".arrow.left");
 
-leftArrow.addEventListener('click', () => {
-    slideCounter--;
 
-    if(slideCounter < 0) {
-        slideCounter = slides.length - 1;
-    }
 
-slideContainer.style.transform = `translateX( -${slideCounter * 100}%)`;
-console.log(slideCounter);
-})
+
+
+
