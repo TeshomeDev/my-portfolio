@@ -277,6 +277,7 @@ input, textarea {
   opacity: 1;
   transform: translateY(0);
 }
+.section-title {
 
 .card {
   /* === Structure */
