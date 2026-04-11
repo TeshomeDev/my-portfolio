@@ -12,12 +12,12 @@
   <body>
     
     <header class="header">
-      <div class="container"> 
-          <h1 class="logo">Tune </h1>
+      <div class="header__inner container"> 
+          <a href="/" class="header__logo">Tune <span class="header__logo-dot">.</span></h1>
 
-        <nav id="navbar" class="navbar">
-          <ul class="nav-items">
-            <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
+        <nav class="header__nav nav" id="navbar" class="navbar" aria-label="Main Navigation">
+          <ul class="nav-list">
+            <li class="nav-item"><a href="#home" class="nav-link nav__link--active">Home</a></li>
             <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
             <li class="nav-item"><a href="#skill" class="nav-link">Skills</a></li>
             <li class="nav-item"><a href="#certifications" class="nav-link">Certification</a></li>
@@ -26,36 +26,37 @@
           </ul>
         </nav>
 
-        <div id="btn" class="hamburger-menu">
-          <div class="bars">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
+        <button id="menu-btn" class="header__toggle toggle" aria-label="Open Menu">
+          <div class="toggle-bars">
+            <span class="toggle-bar"></span>
+            <span class="toggle-bar"></span>
+            <span class="toggle-bar"></span>
           </div>  
-          <div class="bars">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
+          <div class="toggle-bars">
+            <span class="toggle-bar"></span>
+            <span class="toggle-bar"></span>
+            <span class="toggle-bar"></span>
           </div>
-          <div class="bars">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
+          <div class="toggle-bars">
+            <span class="toggle-bar"></span>
+            <span class="toggle-bar"></span>
+            <span class="toggle-bar"></span>
           </div>
-        </div>
+        </button>
+
       </div>  
     </header>
 
-      <main id="main">
-        <section id="home" class="section">
-          <div class="container home flex-center">
-              <div>
+      <main id="main" class="main">
+        <section id="home" class="home section">
+          <div class="hero__inner container">
+              <div class="hero__image-container">
                 <img src="./assets/images/mypictures/profile-picture1.png" alt="Profile Picture of Teshome" class="hero-image" />
               </div>
   
-             <div class="hero-text">
-              <h2>Hi, I am <span class="highlight">Teshome</span></h2>
-              <p>
+             <div class="hero-content">
+              <h2 class="hero__title">Hi, I am <span class="text--accent">Teshome</span></h2>
+              <p class="hero-desc">
                 A web developer in training, building my skills in front-end and back-end technologies. I aim to build websites and applications that are both functional and wel-designed.
               </p>
              </div>
@@ -63,24 +64,24 @@
           </div>        
         </section>
 
-        <section id="about" class="section">
-          <div class="container about">
-           <div class="about-description">
+        <section id="about" class="about section">
+          <div class="about__inner container">
             <h2 class="section-title">About me</h2>
-            <p>
-              I am a self-taught web developer from Ethiopia, Yabello, currently building a strong foundation in web development.
-            </p>
 
-            <p>
-            Right now I'm focused on the core technologies of the web: HTML, CSS, and JavaScript, and in the next phase my focus will be on frameworks and backend technologies to become a fullstack developer.
-            </p>
-          </div>
-            <h3>
-              How I began my programming journey
-            </h3>
+            <div class="about__intro">
+              <p>
+                I am a self-taught web developer from Ethiopia, Yabello, currently building a strong foundation in web development.
+              </p>
+              
+              <p>
+                Right now I'm focused on the core technologies of the web: HTML, CSS, and JavaScript, and in the next phase my focus
+                will be on frameworks and backend technologies to become a fullstack developer.
+              </p>
+            </div>
                     
-          <div class="catalyst d-grid">
-            <div class="decription"> 
+          <div class="catalyst">
+            <div class="catalyst__content"> 
+              <h3 class="catalyst__title">How I began my programming journey</h3>
               <p>
                 I have always wanted to create my own work and make things that matter. I was't sure until I found <cite><a href="https://ia600908.us.archive.org/18/items/the-millionaire-fastlane-140113153049-phpapp01/the-millionaire-fastlane.pdf" alt="the Millionaire FASTLANE book" target="_blank">the Millionaire FASTLANE</a></cite> <small> by MJ DeMarco</small>.
               </p>
@@ -89,197 +90,215 @@
                 The book opened my eyes to new ways of creating value. It led me to programming, where I saw code as a tool to build products and start my own projects. This idea started my journey in coding. Now, I'm focused on learning programming to create my own future.
               </p>
             </div>
-            <div class="catalyst-image-container">
-              <figure>
-                  <img src="./assets/images/mypictures/Screenshot-fastlane-book-coverpage.png" alt="The Millionaire FastLane Book Coverpage" class="catalyst-image">
-                  <figcaption>
+              <figure class="catalyst__figure">
+                  <img src="./assets/images/mypictures/Screenshot-fastlane-book-coverpage.png" alt="Book Cover" class="catalyst__img">
+                  <figcaption class="catalyst__caption">
                     <small>
                       Screenshot of <cite>the Millionaire FASTLANE</cite> book cover page
                     </small>
                   </figcaption>
-              </figure>
-            </div>
+              </figure>           
           </div>
+
          </div>
         </section>
 
-        <section id="skill" class="section">
-          <div class="container skills">
+        <section id="skill" class="skills section">
+          <div class="skills__inner container">
            <h2 class="section-title">My Skills</h2>
-          <div class="skills-container d-grid">
-            <div class="skills-category card">
-              <h3>Frontend <small>(Learning)</small></h3>
-              <div class="skill-items">
-                <div class="skill-item">HTML5</div>
-                <div class="skill-item">CSS3</div>
-                <div class="skill-item">JavaScript</div>
-                <div class="skill-item">Responsive Web Design</div>
-                <div class="skill-item">Frontend Web Develoment Frameworks</div>
-              </div>
+
+          <div class="skills__grid">
+
+            <div class="skill__card">
+              <h3 class="skill__card-title">Frontend <small class="text-muted">(Learning)</small></h3>
+              <ul class="skill__card-list">
+                <li class="skill__card-item">HTML5</li>
+                <li class="skill__card-item">CSS3</li>
+                <li class="skill__card-item">JavaScript</li>
+                <li class="skill__card-item">Responsive Web Design</li>
+                <li class="skill__card-item">Frontend Web Develoment Frameworks</li>
+              </ul>
             </div>
-            <div class="skills-category card">
-              <h3>Backend <small>(Not yet)</small></h3>
-              <div class="skill-items">
-                <div class="skill-item">Node.js</div>
-                <div class="skill-item">Express</div>
-                <div class="skill-item">MongoDB</div>
-                <div class="skill-item">Rest APIs</div>
-                
-              </div>
+
+            <div class="skill__card">
+              <h3 class="skill__card-title">Backend <small class="text-muted">(Not yet)</small></h3>
+              <ul class="skill__card-list">
+                <li class="skill__card-item">Node.js</li>
+                <li class="skill__card-item">Express</li>
+                <li class="skill__card-item">MongoDB</li>
+                <li class="skill__card-item">Rest APIs</li>
+              </ul>
             </div>
-            <div class="skills-category card">
-              <h3>Tools <small>(Learning)</small></h3>
-              <div class="skill-items">
-                <div class="skill-item">VS Code</div>
-                <div class="skill-item">Git and Github</div>
-                <div class="skill-item">Chrome DevTools</div>
-                <div class="skill-item">Command Line</div>
-                
-              </div>
+
+            <div class="skill__card">
+              <h3 class="skill__card-title">Tools <small>(Learning)</small></h3>
+              <ul class="skill-items">
+                <li class="skill-item">VS Code</li>
+                <li class="skill-item">Git and Github</li>
+                <li class="skill-item">Chrome DevTools</li>
+                <li class="skill-item">Command Line</li>  
+              </ul>
             </div>
+
           </div>
           </div>
         </section>
 
-        <section id="certifications" class="section">
-          <div class="container certifications">
+        <section id="certifications" class="certifications section">
+          <div class="certifications__inner container">
             <h2 class="section-title">Certification</h2>
-
-          <p class="certification-desc">These are the Certificates I have earned by completing various programming and web development courses. They demonstrate my dedication and determination to become the real developer I wanted to be. </p>
-          <div class="carousel text-center">
-            <small class="l-border d-ib">Scroll sideways to navigate the certificates</small>
-            <div class="cert-container flex">
-              <img src="assets/images/certificates/udacity-programming-fundamentals-cert.jpg" alt="Udacity Certificate" class="cert-card">
-              <img src="assets/images/certificates/Encode-web-cert.jpg" alt="Encode Web Certificate" class="cert-card">
-              <img src="assets/images/certificates/html-css-cert-coddy.png" alt="Coddy Certificate" class="cert-card">
-              <img src="assets/images/certificates/fcc-rwd-certification.jpg" alt="FCC Responsive Design Certificate" class="cert-card">
-            </div>
+            <p class="certification__desc">These are the Certificates I have earned by completing various programming and web development courses. They demonstrate my dedication and determination to become the real developer I wanted to be. </p>
             
-          </div>
-          </div>
+            <div class="carousel">
+              <small class="carousel__hint">Scroll sideways to navigate the certificates</small>
+              <div class="carousel-track">
+                <img src="assets/images/certificates/udacity-programming-fundamentals-cert.jpg" alt="Udacity" class="carousel__img">
+                <img src="assets/images/certificates/Encode-web-cert.jpg" alt="Encode" class="carousel__img">
+                <img src="assets/images/certificates/html-css-cert-coddy.png" alt="Coddy" class="carousel__img">
+                <img src="assets/images/certificates/fcc-rwd-certification.jpg" alt="FCC" class="carousel__img">
+              </div>
+            </div>
+
           </div>
         </section>
-        <section id="projects" class="section">
 
-          <div class="container project ">
+        <section id="projects" class="projects section">
+          <div class="projects__inner container">
             <h2 class="section-title">Projects</h2>
 
-            <div id="project-tabs-container"></div>
-          <div class="projects-container">
-            <div class="project card flex project-panel" data-project="My Portfolio">
-              <div class="project-img">
-                <i class="fas fa-laptop"></i>
-              </div>
-              <div class="project-description flex">
-                <h3>My Portfolio</h3>
-                <p>A responsive personal portfolio built with semantic HTML, modern CSS, and JavaScript. Includes mobile navigation, layout restructuring for scalability, and smooth UI interactions.</p>
-                
+            <div class="projects__grid">
 
-                <div class="link-btn flex">
-                  <span class="prjt-status l-border">In progress</span>
-                  <div class="inner-link-btn flex">
-                    <a href="https://github.com/TeshomeDev/my-portfolio/" target="_blank" class="project-btn left">Code</a> <a href="https://teshomedev.github.io/my-portfolio/" target="_blank"
-                      class="project-btn right">Demo</a>
-                  </div>
-                 
+              <article class="project-card">
+                <div class="project-card__icon">
+                  <i class="fas fa-laptop"></i>
                 </div>
-              </div>
-            </div> 
+                <div class="project-card__content">
+                  <h3 class="project__card__title">My Portfolio</h3>
+                  <p class="project-card__text">A responsive personal portfolio built with semantic HTML, modern CSS, and JavaScript. Includes mobile navigation, layout restructuring for scalability, and smooth UI interactions.</p>
+                  
 
-            <div class="project card flex project-panel" data-project="Voting System">
-              <div class="project-img"><i class="fas fa-envelope-open-text"></i></div>
-              <div class="project-description flex">
-                <h3>Voting System</h3>
-              <p>A voting system that models poll data using JavaScript <code>Map</code> and enforces single-vote rules with <code>Set</code>.</p>
-                <div class="link-btn flex">
-                  <span class="prjt-status l-border t-done">To be done</span>
-                  <div class="inner-link-btn flex">
-                    <a href="" target="_blank" class="project-btn left">Code</a> <a href=""
-                      class="project-btn right">Demo</a>
-                  </div>
-                
-                </div>
-              
-              </div>
-              </div>
-
-            <div class="project card flex project-panel" data-project="Banking System">
-              <div class="project-img"><i class="fas fa-university"></i></div>
-              <div class="project-description flex">
-                <h3>Bank Account Management</h3>
-                <p>A JavaScript application that simulates real banking operations including deposits, withdrawals, balance tracking, and transaction history.</p>
-
-                  <div class="link-btn flex">
-                    <span class="prjt-status l-border t-done">To be done</span>
-                    <div class="inner-link-btn flex">
-                      <a href="" target="_blank" class="project-btn left">Code</a> <a href=""
-                        class="project-btn right">Demo</a>
+                  <div class="project-card__footer">
+                    <span class="badge badge--progress">In progress</span>
+                    <div class="project-card__links">
+                      <a href="https://github.com/TeshomeDev/my-portfolio/" target="_blank" class="btn-link">Code</a> 
+                      <a href="https://teshomedev.github.io/my-portfolio/" target="_blank" class="btn-link">Demo</a>
                     </div>
                   
                   </div>
-              </div>
-            </div>
-
-            <div class="project card flex project-panel" data-project="Weather App">
-             <div class="project-img"><i class="fas fa-cloud-sun"></i></div>
-             <div class="project-description flex">
-               <h3>Weather App</h3>
-              <p>A responsive weather applicatioin using a public API to fetch and display real-time weather data.</p>
-
-              <div class="link-btn flex">
-                <span class="prjt-status l-border t-done">To be done</span>
-                <div class="inner-link-btn flex">
-                  <a href="" target="_blank" class="project-btn left">Code</a> <a href=""
-                    class="project-btn right">Demo</a>
                 </div>
-              
-              </div>
-              
-             </div> 
-          </div>
+              </article> 
+
+              <article class="project-card">
+                <div class="project-card__icon">
+                  <i class="fas fa-envelope-open-text"></i>
+                </div>
+                <div class="project-card__content">
+                  <h3 class="project-card__title">Voting System</h3>
+                  <p class="project-card__text">
+                    A voting system that models poll data using JavaScript <code>Map</code> and enforces single-vote rules with <code>Set</code>.
+                  </p>
+
+                  <div class="project-card__footer">
+                    <span class="badge badge--todo">To be done</span>
+                    <div class="project-card__links">
+                      <a href="#" target="_blank" class="btn-link">View Code</a> 
+                      <a href="#" target="_blank" class="btn-link">View Demo</a>
+                    </div>
+                  </div>
+                </div>
+              </article>
+
+              <article class="project-card">
+                <div class="project-card__icon">
+                  <i class="fas fa-university"></i>
+                </div>
+                <div class="project-card__content">
+                  <h3 class="project-card__title">Bank Account Management</h3>
+                  <p class="project-card__text">
+                    A JavaScript application that simulates real banking operations including deposits, withdrawals, balance tracking, and transaction history.
+                  </p>
+
+                  <div class="project-card__footer">
+                    <span class="badge badge--todo">To be done</span>
+                    <div class="project-card__links">
+                      <a href="#" target="_blank" class="btn-link">View Code</a> 
+                      <a href="#" target="_blank" class="btn-link">View Demo</a>
+                    </div>
+                  </div>
+                </div>
+              </article>
+
+              <article class="project-card">
+                <div class="project-card__icon">
+                  <i class="fas fa-cloud-sun"></i>
+                </div>
+                <div class="project-card__content">
+                <h3 class="project-card__title">Weather App</h3>
+                <p class="project-card__text">
+                  A responsive weather applicatioin using a public API to fetch and display real-time weather data.
+                </p>
+
+                <div class="project-card__footer">
+                  <span class="badge badge--todo">To be done</span>
+                  <div class="project-card__links">
+                    <a href="#" target="_blank" class="btn-link">View Code</a> 
+                    <a href="#" class="btn-link">View Demo</a>
+                  </div>
+                </div> 
+              </div> 
+              </article>
+
+            </div>
           </div>
         </section>
     
-        <aside id="resources" aria-label="Learning resources" class="aside">
-          <div class="container">
-            <h2>Resources</h2>
-            <div class="res-container flex">
-              <ul class="tutorial-list">
-                <li><h3 class="list-heading">Tutorials</h3></li>
-                <li><a href="https://www.freecodecamp.org" target="_blank">freeCodeCamp</a></li>
-                <li><a href="https://coddy.tech" target="_blank">Coddy</a></li>
-                <li><a href="https://www.w3schools.com" target="_blank">W3Schools</a></li>
-                <li><a href="https://www.geeksforgeeks.org" target="_blank">GeeksforGeeks</a></li>
-                <li><a href="https://mimo.org" target="_blank">Mimo</a></li>
-                <li><a href="https://www.sololearn.com" target="_blank">Sololearn</a></li>
-              </ul>
-              <ul class="ai-list">
-                <li><h3 class="list-heading">AI</h3></li>
-                <li><a href="https://chatgpt.com" target="-blank">ChatGPT</a></li>
-                <li><a href="https://gemini.google.com" target="_blank">Gemini</a></li>
-                <li><a href="https://deepseek.com" target="_blank">DeepSeek</a></li>
-              </ul>
+        <aside id="resources" class="resources aside">
+          <div class="resources__inner container">
+            <h2 class="resources__title">Resources</h2>
+            <div class="resources__grid">
+              <div class="resource-list">
+                <h3 class="resource-list__title">Tutorials</h3>
+                <ul class="resource-list__items">
+                  <li><a href="https://www.freecodecamp.org" target="_blank" class="resources-list__link">freeCodeCamp</a></li>
+                  <li><a href="https://coddy.tech" target="_blank" class="resource-list__link">Coddy</a></li>
+                  <li><a href="https://www.w3schools.com" target="_blank" class="resource-list__link">W3Schools</a></li>
+                  <li><a href="https://www.geeksforgeeks.org" target="_blank" class="resource-list__link">GeeksforGeeks</a></li>
+                  <li><a href="https://mimo.org" target="_blank" class="resource-list__link">Mimo</a></li>
+                  <li><a href="https://www.sololearn.com" target="_blank" class="resource-list__link">Sololearn</a></li>
+                </ul>
+
+                <h3 class="resource-list__title">AI</h3>
+                <ul class="resources-list__items">
+                  <li><a href="https://chatgpt.com" target="-blank" class="resource-list__link">ChatGPT</a></li>
+                  <li><a href="https://gemini.google.com" target="_blank" class="resource-list__link">Gemini</a></li>
+                  <li><a href="https://deepseek.com" target="_blank" class="resource-list__link">DeepSeek</a></li>
+                </ul>
+              </div>
+        
             </div>
           </div>
       </aside>
       </main>
 
-    <footer>
-      <div class="container footer">
-        <div class="footer-container flex-between">
-        <div class="phone-email">
-          <div class="phone">Phone: <a href="tel:+251942487372">Call me</a></div>
-          <div class="email">Email: <a href="mailto:teshomebf@gmail.com">teshomebf@gmail.com</a></div>
+    <footer class="footer">
+      <div class="footer__inner container footer">
+        <div class="footer__top">
+          <div class="footer__contact">
+            <div class="footer__info">Phone: <a href="tel:+251942487372">Call me</a></div>
+            <div class="footer__info">Email: <a href="mailto:teshomebf@gmail.com">teshomebf@gmail.com</a></div>
+          </div>
+
+          <div class="footer__divider"></div>
+
+          <div class="footer__social">
+            <a href="#"><i class="fa-brands fa-github s-link"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin s-link"></i></a>
+            <a href="#"><i class="fa-brands fa-telegram s-link"></i></a>
+          </div>
+
         </div>
-        <div class="vertical-bar"></div>
-        <div class="social-media flex-between">
-          <a href="#"><i class="fa-brands fa-github s-link"></i></a>
-          <a href="#"><i class="fa-brands fa-linkedin s-link"></i></a>
-          <a href="#"><i class="fa-brands fa-telegram s-link"></i></a>
-        </div>
-      </div>
-        <hr>
-        <p class="copy-right">&copy; 2026 Teshome. All rights reserved.</p>
+        <hr class="footer__hr">
+        <p class="footer__copyright">&copy; 2026 Teshome. All rights reserved.</p>
       </div>
     </footer>
     <script src="script.js"></script>
