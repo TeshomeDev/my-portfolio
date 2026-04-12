@@ -195,6 +195,8 @@
 }
 
 body {
+  display: grid; /* Forces every elements of the page to respect viewport*/
+
   background-color: var(--color-bg);
   color: var(--color-text-main);
   
@@ -292,7 +294,7 @@ a {
 
   .header__inner {
     width: 100%;
-    display: flext;
+    display: flex;
     justify-content: space-between;
     align-items: center;
   }
@@ -304,6 +306,65 @@ a {
     align-items: center;
     text-align: center;
     gap: var(--space-md);
+  }
+}
+
+@layer components {
+  .header__logo {
+    font-size: var(--text-md);
+    font-weight: 800;
+
+    color: var(--color-text-main);
+
+    letter-spacing: -1.5;
+    text-transform: capitalize;
+
+  }
+
+  .header__logo-dot {
+    color: var(--color-primary);
+  }
+
+  .toggle__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3px;
+    width: 24px;
+  }
+
+  .toggle__grid span {
+    width: 5px;
+    height: 5px;
+    background-color: var(--color-primary);
+    border-radius: var(--radius-round);
+    transition: var(--tr-bg);
+  }
+
+  .nav {
+    display: none;
+  }
+
+  .header__toggle {
+    width: 44px;
+    height: 44px;
+
+    display: grid;
+    place-items: center;
+
+    transition: var(--tr-transform);
+
+    &:active {
+      transform: scale(0.9);
+    }
+
+    &:hover .toggle__grid span {
+      transition: trnasform var(--tr-instant) ease-out;
+    }
+
+    &:hover .toggle__grid span:nth-child(even) {
+      transform: scale(1.2);
+      background-color: var(--color-accent);
+    }
   }
 }
 
