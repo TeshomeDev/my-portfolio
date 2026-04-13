@@ -210,6 +210,10 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+section {
+  scroll-margin-top: var(--space-md);
+}
+
 img,
 picture,
 svg {
