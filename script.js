@@ -5,41 +5,29 @@
 ===============*/ 
 
 //Mobile menu
-const hamburger = document.getElementById('btn');
-const navBar = document.getElementById('navbar');
+const menuBtn = document.querySelector('#menu-btn');
+const navbar = document.querySelector('#navbar');
+const closeMenu = document.querySelector(".nav__close");
 
-const navLinks = document.querySelectorAll('.navbar a');
+const links = document.querySelectorAll('.nav__link');
 
-const mainContent = document.querySelector('main');
 
-hamburger.addEventListener(
-    'click', () => {
-        navBar.classList.toggle('show-menu');
-        hamburger.classList.toggle('close');
-    }
-);
+menuBtn.addEventListener('click', () => {
 
-navLinks.forEach(link => {
+        navbar.classList.toggle('is-open');
+});
+
+closeMenu.addEventListener("click", () => {
+    navbar.classList.remove("is-open");
+});
+
+links.forEach(link => {
     link.addEventListener('click', () => {
-        navBar.classList.remove('show-menu');
-        hamburger.classList.remove('close');
+        navbar.classList.remove('is-open');        
     });
 });
 
-navBar.addEventListener('mouseleave', function() {
-    
-     navBar.classList.remove('show-menu');
-    hamburger.classList.remove('close');
-    textMenu.classList.remove('show-menu-text');
-});
 
-const ul = document.querySelector('.header')
-document.addEventListener('click', function() {
-    if(!ul.contains(event.target)) {
-       navBar.classList.remove('show-menu');
-       hamburger.classList.remove('close');
-    } 
-});
 
 const sections = document.querySelectorAll(".section");
 
@@ -58,53 +46,56 @@ window.addEventListener("scroll", () => {
 });
 
 /*
-=====================
-PROJECTS SECTION
-=====================*/
+// =====================
+// PROJECTS SECTION
+// =====================*/
 
-const projects = ["My Portfolio", "Voting System", "Banking System", "Weather App"];
+// const projects = ["My Portfolio", "Voting System", "Banking System", "Weather App"];
 
-const projectTabsContainer = document.getElementById("project-tabs-container");
+// const projectTabsContainer = document.getElementById("project-tabs-container");
 
-const projectPanels = document.querySelectorAll(".project-panel");
+// const projectPanels = document.querySelectorAll(".project-panel");
 
-const projectsContainer = document.querySelector(".projects-container");
+// const projectsContainer = document.querySelector(".projects-container");
 
-function createProjectTabs() {
+// function createProjectTabs() {
 
-    projects.forEach(project => {
-        const tab = document.createElement("button");
-        tab.classList.add("project-tab");
-        tab.textContent = project;
-        projectTabsContainer.appendChild(tab);
-    });
-}
+//     projects.forEach(project => {
+//         const tab = document.createElement("button");
+//         tab.classList.add("project-tab");
+//         tab.textContent = project;
+//         projectTabsContainer.appendChild(tab);
+//     });
+// }
 
-createProjectTabs();
+// createProjectTabs();
 
-const projectTabs = document.querySelectorAll(".project-tab");
+// const projectTabs = document.querySelectorAll(".project-tab");
 
 
 
-projectTabs.forEach(tab => {
-    tab.addEventListener("click", () => {
+// projectTabs.forEach(tab => {
+//     tab.addEventListener("click", () => {
 
-    projectPanels.forEach(panel => {
-        panel.classList.remove("display-panel");
-    });
+//     projectPanels.forEach(panel => {
+//         panel.classList.remove("display-panel");
+//     });
 
-    projectPanels.forEach(panel => {
-                if(panel.dataset.project === tab.textContent) {
-                    panel.classList.add("display-panel");
-                }
+//     projectPanels.forEach(panel => {
+//                 if(panel.dataset.project === tab.textContent) {
+//                     panel.classList.add("display-panel");
+//                 }
 
-        });
-});
-});
+//         });
+// });
+// });
 
-if(projectTabs.length > 0) {
-    projectTabs[0].click();
-}
+// if(projectTabs.length > 0) {
+//     projectTabs[0].click();
+// }
+
+
+
 
 
 
