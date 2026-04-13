@@ -192,6 +192,7 @@
   html {
   font-size: var(--font-base);
   scroll-behavior: smooth;
+  scroll-padding-top: var(--space-md);
 }
 
 body {
