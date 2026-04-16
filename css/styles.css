@@ -605,6 +605,12 @@ a {
   scroll-behavior: smooth;
 
   -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.certs__carousel::-webkit-scrollbar {
+  display: none;
 }
 
 .certs__track {
