@@ -602,19 +602,21 @@ a {
   overflow-y: hidden;
 
   scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+
+  -webkit-overflow-scrolling: touch;
 }
 
 .certs__track {
   display: flex;
+  gap: var(--space-sm);
 }
 
 .cert-card {
-  flex: 0 0 auto;
-  width: 100%;
+  flex: 0 0 100%;
   scroll-snap-align: start;
 
-  margin-inline-end: var(--space-md);
-  
+  min-width: 0;
 }
  
 }
