@@ -64,16 +64,35 @@ prevBtn.addEventListener("click", () => {
     const amountToScroll = carousel.offsetWidth;
 
     carousel.scrollBy({left: -amountToScroll, behavior: "smooth"});
-})
-
-const track = document.querySelector(".certs__track");
-
-track.addEventListener("scroll", () => {
-
-    if(track.scrollLeft <= 0) {
-        
-    }
 });
+
+
+function updateButtons() {
+
+    const currentPosition = carousel.scrollLeft;
+
+    const maxPosition = carousel.scrollWidth - carousel.offsetWidth;
+
+    if(currentPosition <= 1) {
+        prevBtn.style.opacity = "0.3";
+        prevBtn.style.pointerEvents = "none";
+    } else {
+        prevBtn.style.opacity = "1";
+        prevBtn.style.pointerEvents = "auto";
+    }
+
+    if(currentPosition >= maxPosition -1) {
+        nextBtn.style.opacity = "0.3";
+        nextBtn.style.pointerEvents = "none";
+    } else {
+        nextBtn.style.opacity = "1";
+        nextBtn.style.pointerEvents = "auto";
+    }
+}
+
+updateButtons();
+
+carousel.addEventListener("scroll", updateButtons);
 /*
 // =====================
 // PROJECTS SECTION
