@@ -528,7 +528,7 @@ a {
   }
 
   .hero__img {
-    width: clamp(150px, 40vw, 250px);
+    width: clamp(150px, 35vw, 250px);
     aspect-ratio: 1 / 1;
     object-fit: cover;
 
@@ -603,6 +603,7 @@ a {
   gap: var(--space-md);
 
   padding: var(--space-xs) var(--space-sm);
+  padding-left: var(--space-md);
   margin-bottom: var(--space-md);
 
   font-size: var(--text-sm);
@@ -660,6 +661,25 @@ a {
   scroll-snap-align: start;
 
   min-width: 0;
+
+  background-color: var(--color-surface);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-2);
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.cert-card__img {
+  width: 100%;
+  
+  object-fit: contain;
+  aspect-ratio: 4 / 3;
+
+  border-radius: var(--radius-md);
 }
  
 }
