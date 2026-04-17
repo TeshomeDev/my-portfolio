@@ -272,6 +272,10 @@ a {
 
 }
 
+/* ============================================================================
+                                 LAYOUT
+=============================================================================*/
+
 
 @layer layout {
   .section {
@@ -348,6 +352,11 @@ a {
     gap: var(--space-md);
   }
 }
+
+/* ============================================================================
+                                 COMPONENTS
+=============================================================================*/
+
 
 @layer components {
   .header__logo {
@@ -597,6 +606,8 @@ a {
     gap: var(--space-xs);
   }
 
+  /* Carousel */
+
 .carousel-container__badge {
   display: inline-flex;
   align-items: center;
@@ -633,6 +644,56 @@ a {
   border-radius: var(--radius-round);
 
   opacity: 0.6;
+}
+
+.certs__window {
+  position: relative;
+}
+
+.certs__nav {
+  display: none;
+}
+
+.certs__btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: var(--z-sticky);
+
+
+  background-color: var(--color-surface);
+  color: var(--color-primary);
+  border: 1px solid var(--surface-border);
+  border-radius: var(--radius-round);
+  box-shadow: var(--shadow-2);
+
+  display: grid;
+  place-items: center;
+
+  transition: var(--tr-transform), var(--tr-bg);
+
+  width: 44px;
+  height: 44px;
+}
+
+@media (hover: hover) {
+  .certs__btn:hover {
+    background-color: var(--color-primary);
+    color: var(--color-on-accent);
+    transform: translateY(-50%) scale(1.1);
+  }
+}
+
+  .certs__btn:active {
+    transform: translateY(-35%);
+  }
+
+.certs__btn--prev {
+  left: var(--space-lg);
+}
+
+.certs__btn--next {
+  right: var(--space-lg);
 }
 
 .certs__carousel {
@@ -682,6 +743,24 @@ a {
   border-radius: var(--radius-md);
 }
  
+}
+
+/* ============================================================================
+                                   @MEDIA 768px
+=============================================================================*/
+
+
+@media (min-width: 768px) {
+
+  .certs__nav {
+    display: block;
+  }
+
+  .certs__carousel {
+    width: 40%;
+    margin-inline: auto;
+
+  }
 }
 
 

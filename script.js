@@ -46,6 +46,35 @@ window.addEventListener("scroll", () => {
 });
 
 /*
+===============
+    CAROUSEL
+===============*/
+
+const carousel = document.querySelector(".certs__carousel");
+const prevBtn = document.querySelector(".certs__btn--prev");
+const nextBtn = document.querySelector(".certs__btn--next");
+
+nextBtn.addEventListener("click", () => {
+    const amountToScroll = carousel.offsetWidth;
+
+    carousel.scrollBy({left: amountToScroll, behavior: "smooth"});
+});
+
+prevBtn.addEventListener("click", () => {
+    const amountToScroll = carousel.offsetWidth;
+
+    carousel.scrollBy({left: -amountToScroll, behavior: "smooth"});
+})
+
+const track = document.querySelector(".certs__track");
+
+track.addEventListener("scroll", () => {
+
+    if(track.scrollLeft <= 0) {
+        
+    }
+});
+/*
 // =====================
 // PROJECTS SECTION
 // =====================*/
