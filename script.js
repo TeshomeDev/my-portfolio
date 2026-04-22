@@ -93,54 +93,7 @@ function updateButtons() {
 updateButtons();
 
 carousel.addEventListener("scroll", updateButtons);
-/*
-// =====================
-// PROJECTS SECTION
-// =====================*/
 
-// const projects = ["My Portfolio", "Voting System", "Banking System", "Weather App"];
-
-// const projectTabsContainer = document.getElementById("project-tabs-container");
-
-// const projectPanels = document.querySelectorAll(".project-panel");
-
-// const projectsContainer = document.querySelector(".projects-container");
-
-// function createProjectTabs() {
-
-//     projects.forEach(project => {
-//         const tab = document.createElement("button");
-//         tab.classList.add("project-tab");
-//         tab.textContent = project;
-//         projectTabsContainer.appendChild(tab);
-//     });
-// }
-
-// createProjectTabs();
-
-// const projectTabs = document.querySelectorAll(".project-tab");
-
-
-
-// projectTabs.forEach(tab => {
-//     tab.addEventListener("click", () => {
-
-//     projectPanels.forEach(panel => {
-//         panel.classList.remove("display-panel");
-//     });
-
-//     projectPanels.forEach(panel => {
-//                 if(panel.dataset.project === tab.textContent) {
-//                     panel.classList.add("display-panel");
-//                 }
-
-//         });
-// });
-// });
-
-// if(projectTabs.length > 0) {
-//     projectTabs[0].click();
-// }
 
 
 
