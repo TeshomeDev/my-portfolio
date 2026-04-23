@@ -793,6 +793,8 @@ a {
   background: var(--surface-bg);
   border: 1px solid var(--surface-border);
   box-shadow: var(--shadow-1);
+
+  position: relative;
 }
 
 .project-card__header {
@@ -824,6 +826,28 @@ a {
   white-space: nowrap;
 
   padding: var(--space-xs);
+}
+
+.badge {
+  position: absolute;
+  top: calc(var(--space-sm) * -1);
+  right: calc(var(--space-sm) * -1);
+
+  padding: var(--space-xs) var(--space-sm);
+  font-size: calc(var(--text-sm) / var(--text-ratio));
+  font-weight: 600;
+
+  white-space: nowrap;
+
+  background: var(--color-info);
+  color: var(--color-on-accent);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-1);
+}
+
+.badge--todo {
+  background: var(--color-border);
+  color: var(--color-text-muted);
 }
  
 }
