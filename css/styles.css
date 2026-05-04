@@ -207,8 +207,6 @@ body {
   min-height: 100vh;
 
   -webkit-font-smoothing: antialiased;
-
-  outline: 1px solid blue;
 }
 
 section {
@@ -613,7 +611,7 @@ a {
     height: fit-content;
 
     &:hover {
-      transform: translateY(-4px);
+      transform: translateY(calc(var(--space-xs) * -1));
       box-shadow: var(--shadow-2);
     }
   }
@@ -802,6 +800,15 @@ a {
   box-shadow: var(--shadow-1);
 
   position: relative;
+
+  transition: var(--tr-transform), var(--tr-shadow);
+}
+
+@media (hover: hover) {
+  .project-card:hover {
+    transform: translateY(calc(var(--space-xs) * -1));
+    box-shadow: var(--shadow-2);
+  }
 }
 
 .project-card__header {
@@ -834,7 +841,36 @@ a {
   white-space: nowrap;
 
   padding: var(--space-xs);
+
+  transition: var(--tr-bg), var(--tr-color), var(--tr-transform);
 }
+
+
+@media (hover: hover) {
+  .btn-link:hover {
+    transform: translateY(-1px);
+  }
+  .demo-link:hover {
+    background-color: var(--color-accent);
+  }
+  .code-link:hover {
+    background-color: var(--color-info);
+    color: var(--color-on-accent);
+  }
+}
+
+.demo-link {
+  background-color: var(--color-primary);
+  color: var(--color-on-accent);
+
+  transition: var(--tr-bg);
+}
+
+.code-link {
+  color: var(--color-primary);
+  transition: var(--tr-bg), var(--tr-color);
+}
+
 
 .badge {
   position: absolute;
