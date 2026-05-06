@@ -972,7 +972,14 @@ a {
   .certs__carousel {
     width: 40%;
     margin-inline: auto;
+  }
 
+  .certs__desc {
+    margin-bottom: var(--space-lg);
+  }
+
+  .carousel-container__badge {
+    display: none;
   }
 
 }
