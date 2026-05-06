@@ -969,10 +969,11 @@ a {
   .nav {
     position: static;
     visibility: visible;
-    min-height: none;
+    min-height:auto;
     opacity: 1;
 
     background-color: inherit;
+    border-bottom: none;
   }
 
   .nav__item {
@@ -987,6 +988,10 @@ a {
   .nav__link {
     font-weight: 400;
     font-size: var(--text-md);
+  }
+
+  .nav__close {
+    display: none;
   }
 
    .catalyst__grid {
