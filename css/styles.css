@@ -951,15 +951,45 @@ a {
 
 @media (min-width: 768px) {
 
-  .hero__inner {
+  @layer layout {
+    .hero__inner {
     display: grid; 
     place-items: center;
     grid-template-columns: 1fr 1fr;
     gap: var(--space-lg);
     text-align: left;
   }
+  }
+  
+  @layer components {
+    .toggle {
+    display: none;
+  }
 
-  .catalyst__grid {
+  .nav {
+    position: static;
+    visibility: visible;
+    min-height: none;
+    opacity: 1;
+
+    background-color: inherit;
+  }
+
+  .nav__item {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+
+  .nav__list {
+    flex-direction: row;
+  }
+
+  .nav__link {
+    font-weight: 400;
+    font-size: var(--text-base);
+  }
+
+   .catalyst__grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: var(--space-lg);
@@ -981,7 +1011,7 @@ a {
   .carousel-container__badge {
     display: none;
   }
-
+  }
 }
 
 
