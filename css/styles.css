@@ -133,8 +133,9 @@
   --tr-shadow: box-shadow var(--ms-instant) ease-out;
   --tr-transform: transform var(--ms-smooth) ease-out;
   --tr-opacity: opacity var(--ms-smooth) ease-out;
+  --tr-filter: filter var(--ms-smooth) ease-out;
   --tr-border: border var(--ms-instant) ease-out;
-  --tr-border-color: border-color var(--ms-instant) ease-out;
+  --tr-border-color: border-color var(--ms-instant)ease-out;
 
   /* ==== CONTAINERS ====*/
   --container-max-width: 1024px;
@@ -287,9 +288,6 @@ a {
 
 
 @layer layout {
-   .section {
-    padding-block: var(--space-xl);
-  }
 
   .container {
     width: 100%;
@@ -321,15 +319,17 @@ a {
 
   .section:not(:first-child) {
     opacity: 0;
-    transform: translateY(40px);
+    filter: blur(4px);
+    transform: translateY(30px);
 
-    transition: var(--tr-opacity), var(--tr-transform);
+    transition: var(--tr-opacity), var(--tr-transform), var(--tr-filter);
 
-    will-change: opacity, transform;
+    will-change: opacity, transform, filter;
   }
 
   .section.visible {
     opacity: 1;
+    filter: blur(0);
     transform: translateY(0);
   }
 
@@ -556,6 +556,10 @@ a {
 
     display: grid;
     place-items: center;
+  }
+
+  .section {
+    padding-block: var(--space-xl);
   }
 
   .section__title {

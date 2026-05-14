@@ -31,19 +31,17 @@ links.forEach(link => {
 
 const sections = document.querySelectorAll(".section");
 
-window.addEventListener("scroll", () => {
-    sections.forEach(section => {
-        if(section.classList.contains("visible")) return;
-
-        const rect = section.getBoundingClientRect();
-
-        const triggerPoint = window.innerHeight - (rect.height * 0.20);
-
-        if(rect.top < triggerPoint) {
-            section.classList.add("visible");
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, index )=> {
+        if(entry.isIntersecting) {
+            setTimeout(() => {
+                entry.target.classList.add("visible");
+            }, index * 100);
         }
     });
-});
+}, {threshold: 0.3});
+
+sections.forEach(section => observer.observe(section));
 
 /*
 ===============
