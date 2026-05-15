@@ -370,6 +370,7 @@ a {
     padding: var(--space-sm) var(--space-md);
     border-radius: calc(var(--radius-lg) * 3);
 
+    font-size: var(--text-sm);
     font-weight: 600;
 
     transition: 
@@ -592,7 +593,7 @@ a {
   }
 
   .section {
-    padding-block: var(--space-xl);
+    padding-block: var(--space-lg);
   }
 
   .section__title {
@@ -646,7 +647,7 @@ a {
   }
 
   .hero__title {
-    font-size: var(--text-xl);
+    font-size: var(--text-lg);
     line-height: 1.1;
     font-weight: 800;
 
@@ -734,6 +735,10 @@ a {
   .hero__content>* {
     opacity: 0;
     animation: fade-up 700ms ease forwards;
+  }
+
+  .hero__desc {
+    display: none;
   }
 
   .btn:hover {
@@ -1171,6 +1176,10 @@ a {
     display: none;
   }
 
+  .section {
+    padding-block: var(--space-xl);
+  }
+
   .hero__title {
     font-size: calc(var(--text-lg) * 2);
     line-height: 1.1;
@@ -1198,6 +1207,14 @@ a {
     );
 
     pointer-events: none;
+  }
+
+  .hero__desc {
+    display: block;
+  }
+
+  .btn {
+    font-weight: 600;
   }
 
    .catalyst__grid {
