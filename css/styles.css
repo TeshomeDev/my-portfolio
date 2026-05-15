@@ -625,6 +625,8 @@ a {
   .hero {
     position: relative;
     overflow: hidden;
+
+    padding-top: 0;
   }
 
   .hero__eyebrow {
