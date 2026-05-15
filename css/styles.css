@@ -704,6 +704,25 @@ a {
     transform: translateY(-4px);
   }
 
+  .hero__signature {
+    margin-top: var(--space-sm);
+
+    font-size: var(--tex-md);
+    font-weight: 300;
+    font-family: "Caveat", cursive;
+    letter-spacing: 0.08em;
+
+    text-align: center;
+
+    color: var(--color-text-muted);
+
+    opacity: 0;
+
+    animation: fade-up 700ms ease forwards;
+
+    animation-delay: 700ms;
+  }
+
   .hero__content {
     position: relative;
     z-index: 1;
